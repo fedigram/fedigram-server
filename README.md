@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/github/license/nebula-chat-fork/chatengine.svg)](https://github.com/nebula-chat-fork/chatengine/blob/master/LICENSE)
+
 # NebulaChat - Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
 > open source mtproto server implement by golang, which compatible telegram client.
 
