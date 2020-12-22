@@ -2,9 +2,11 @@
 
 # PluralityServer
 
-**Main repo:** https://github.com/PluralityNET/PluralityServer
+**PluralityServer** is a fork of https://github.com/nebula-chat/chatengine
 
-**Status:** Limited functionality (as in NebulaChat's chatengine). Making the code build and run from Plurality repo.
+**PluralityServer's main repo:** https://github.com/PluralityNET/PluralityServer
+
+**PluralityServer's status:** Limited functionality (as in public NebulaChat's chatengine). Currently making the code build and run from Plurality repo.
 
 ----------------------------
 
