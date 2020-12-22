@@ -4,7 +4,7 @@
 
 **Main repo:** https://github.com/PluralityNET/PluralityServer
 
-**Status:** Limited functionality (as in NebulaChat's chatengine).
+**Status:** Limited functionality (as in NebulaChat's chatengine). Making the code build and run from Plurality repo.
 
 ----------------------------
 
