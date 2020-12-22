@@ -149,7 +149,7 @@ git clone https://github.com/nebula-chat/chatengine.git
 
 ## Feedback
 
-Nebula Chat's Telegram chat:
+Nebula Chat's chats:
 
  * English: https://t.me/entelegramd
  * Chinese: https://t.me/cntelegramd
