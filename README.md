@@ -104,13 +104,13 @@ git clone https://github.com/PluralityNET/PluralityServer.git
     ```
 
 - Init
-    - set the root mysql password;
+    - configure mysql passwordless login for OS user `root`;
     
     - then,
     
     ```shell
     cd $GOPATH/src/github.com/PluralityNET/PluralityServer/scripts/
-    mysql -u root -p
+    mysql -u root
         CREATE DATABASE PluralityServer;
         use PluralityServer;
         source PluralityServer.sql
