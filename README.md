@@ -47,6 +47,9 @@ make
 ```
 
 ### Manual Build and Install
+
+Note: You will probably need a VM for this as the code often uses root at MySQL and root for filesystem write access.
+
 #### Depends
 
 - redis
