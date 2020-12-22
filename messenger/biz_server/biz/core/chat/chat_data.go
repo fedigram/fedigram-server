@@ -19,12 +19,12 @@ package chat
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/core"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dataobject"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/pkg/random2"
-	base2 "github.com/nebula-chat/chatengine/pkg/util"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/random2"
+	base2 "github.com/PluralityNET/PluralityServer/pkg/util"
 	"math/rand"
 	"time"
 )

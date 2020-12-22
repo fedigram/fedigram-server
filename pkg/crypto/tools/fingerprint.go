@@ -18,7 +18,7 @@
 package main
 
 import (
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"encoding/binary"
 	"crypto/sha1"
 	"fmt"

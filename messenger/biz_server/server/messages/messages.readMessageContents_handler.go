@@ -19,15 +19,15 @@ package messages
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
-	"github.com/nebula-chat/chatengine/pkg/logger"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/pkg/logger"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"golang.org/x/net/context"
 	// "time"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/core"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
 	"time"
-	"github.com/nebula-chat/chatengine/messenger/sync/sync_client"
+	"github.com/PluralityNET/PluralityServer/messenger/sync/sync_client"
 )
 
 // messages.readMessageContents#36a73f77 id:Vector<int> = messages.AffectedMessages;

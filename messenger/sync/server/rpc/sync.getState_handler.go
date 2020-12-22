@@ -20,8 +20,8 @@ package rpc
 import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/nebula-chat/chatengine/mtproto"
-    "github.com/nebula-chat/chatengine/pkg/logger"
+    "github.com/PluralityNET/PluralityServer/mtproto"
+    "github.com/PluralityNET/PluralityServer/pkg/logger"
     "time"
 )
 

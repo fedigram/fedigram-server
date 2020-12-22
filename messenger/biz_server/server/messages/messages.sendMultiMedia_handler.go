@@ -19,14 +19,14 @@ package messages
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
-	"github.com/nebula-chat/chatengine/pkg/logger"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/core"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/pkg/logger"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
 	"golang.org/x/net/context"
 	"time"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/core/message"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/message"
 )
 
 func (s *MessagesServiceImpl) makeOutboxMessageBySendMultiMedia(authKeyId int64, fromId int32, peer *base.PeerUtil, request *mtproto.TLMessagesSendMultiMedia) ([]*mtproto.Message, []int64) {

@@ -19,11 +19,11 @@ package chat
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/core"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dao"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dao/mysql_dao"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao/mysql_dao"
 )
 
 type chatsDAO struct {

@@ -18,10 +18,10 @@
 package account
 
 import (
-	base2 "github.com/nebula-chat/chatengine/pkg/util"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dataobject"
-	"github.com/nebula-chat/chatengine/mtproto"
+	base2 "github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 func (m *AccountModel) GetNotifySettings(userId int32, peer *base.PeerUtil) *mtproto.PeerNotifySettings {

@@ -19,10 +19,10 @@ package service
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
-	"github.com/nebula-chat/chatengine/pkg/mysql_client"
-	"github.com/nebula-chat/chatengine/pkg/redis_client"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
+	"github.com/PluralityNET/PluralityServer/pkg/redis_client"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"google.golang.org/grpc"
 )
 

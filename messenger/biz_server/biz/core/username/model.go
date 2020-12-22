@@ -18,12 +18,12 @@
 package username
 
 import (
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/core"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dao"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dao/mysql_dao"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dataobject"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao/mysql_dao"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 const (

@@ -18,7 +18,7 @@
 package server
 
 import (
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 func checkMessageConfirm(tl mtproto.TLObject) bool {

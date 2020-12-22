@@ -19,7 +19,7 @@ package base
 
 import (
 	"fmt"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 type ReportReasonType int8

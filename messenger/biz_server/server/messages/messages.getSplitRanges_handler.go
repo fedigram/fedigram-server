@@ -21,9 +21,9 @@ import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "fmt"
-    "github.com/nebula-chat/chatengine/pkg/grpc_util"
-    "github.com/nebula-chat/chatengine/pkg/logger"
-    "github.com/nebula-chat/chatengine/mtproto"
+    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+    "github.com/PluralityNET/PluralityServer/pkg/logger"
+    "github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 // messages.getSplitRanges#1cff7e08 = Vector<MessageRange>;

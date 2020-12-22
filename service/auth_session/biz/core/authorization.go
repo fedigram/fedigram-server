@@ -18,8 +18,8 @@
 package auth_session
 
 import (
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/service/auth_session/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/service/auth_session/biz/dal/dataobject"
 )
 
 func getCountryAndRegionByIp(ip string) (string, string) {

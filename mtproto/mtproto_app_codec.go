@@ -22,8 +22,8 @@ import (
 	"encoding/hex"
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/crypto"
-	"github.com/nebula-chat/chatengine/pkg/net2"
+	"github.com/PluralityNET/PluralityServer/pkg/crypto"
+	"github.com/PluralityNET/PluralityServer/pkg/net2"
 	"io"
 )
 

@@ -18,7 +18,7 @@
 package message
 
 import (
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
 )
 
 func (m *MessageModel) GetUnreadMentionCount(userId int32, peerType int8, peerId int32) int32 {

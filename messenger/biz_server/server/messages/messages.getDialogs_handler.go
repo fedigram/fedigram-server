@@ -19,9 +19,9 @@ package messages
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
-	"github.com/nebula-chat/chatengine/pkg/logger"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/pkg/logger"
 	"golang.org/x/net/context"
 	"math"
 )

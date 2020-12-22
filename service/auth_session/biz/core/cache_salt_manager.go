@@ -103,9 +103,9 @@ import (
 
 	"encoding/json"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/pkg/cache"
-	_ "github.com/nebula-chat/chatengine/pkg/cache/redis"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/cache"
+	_ "github.com/PluralityNET/PluralityServer/pkg/cache/redis"
 )
 
 const (

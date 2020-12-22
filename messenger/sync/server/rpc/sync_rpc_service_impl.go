@@ -20,13 +20,13 @@ package rpc
 import (
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/messenger/sync/biz/core/update"
-	"github.com/nebula-chat/chatengine/service/status/proto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/messenger/sync/biz/core/update"
+	"github.com/PluralityNET/PluralityServer/service/status/proto"
 	"sync"
 	"github.com/gogo/protobuf/proto"
-	"github.com/nebula-chat/chatengine/service/status/client"
-	"github.com/nebula-chat/chatengine/mtproto/rpc"
+	"github.com/PluralityNET/PluralityServer/service/status/client"
+	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
 )
 
 /*

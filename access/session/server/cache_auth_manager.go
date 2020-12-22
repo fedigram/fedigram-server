@@ -20,11 +20,11 @@ package server
 import (
 	"context"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/util"
-	"github.com/nebula-chat/chatengine/pkg/cache"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/cache"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"time"
 	"fmt"
 )

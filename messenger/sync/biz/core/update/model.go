@@ -19,9 +19,9 @@ package update
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/mysql_client"
-	"github.com/nebula-chat/chatengine/messenger/sync/biz/dal/dao/mysql_dao"
-	"github.com/nebula-chat/chatengine/service/idgen/client"
+	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
+	"github.com/PluralityNET/PluralityServer/messenger/sync/biz/dal/dao/mysql_dao"
+	"github.com/PluralityNET/PluralityServer/service/idgen/client"
 )
 
 type updatesDAO struct {

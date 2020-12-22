@@ -19,12 +19,12 @@ package server
 
 import (
 	"fmt"
-	"github.com/nebula-chat/chatengine/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/net2"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/mtproto/rpc"
-	"github.com/nebula-chat/chatengine/service/idgen/client"
+	"github.com/PluralityNET/PluralityServer/pkg/net2"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
+	"github.com/PluralityNET/PluralityServer/service/idgen/client"
 	"sync"
 	"github.com/gogo/protobuf/proto"
 	"time"

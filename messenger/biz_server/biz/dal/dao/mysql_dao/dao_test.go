@@ -26,7 +26,7 @@ import (
 )
 
 func TestReflectTLObject(t *testing.T) {
-	mysqlDsn := "root:@/chatengine?charset=utf8"
+	mysqlDsn := "root:@/PluralityServer?charset=utf8"
 
 	db, err := sqlx.Connect("mysql", mysqlDsn)
 	if err != nil {

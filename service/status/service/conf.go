@@ -21,7 +21,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/BurntSushi/toml"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
 )
 
 var (

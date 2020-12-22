@@ -22,8 +22,8 @@ services:
       - ${PWD}/docker/mysql/init-sql:/docker-entrypoint-initdb.d
       - ${PWD}/docker/mysql/data:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=chatengine
-      - MYSQL_DATABASE=chatengine
+      - MYSQL_ROOT_PASSWORD=PluralityServer
+      - MYSQL_DATABASE=PluralityServer
     # ports:
     #   - 3306:3306
   redis:
@@ -37,8 +37,8 @@ services:
       - ${PWD}/docker/redis/redis.conf:/etc/redis/redis.conf
       - ${PWD}/docker/redis/data:/data
     entrypoint: redis-server /etc/redis/redis.conf
-  chatengine:
-    image: chatengine/server:latest
+  PluralityServer:
+    image: PluralityServer/server:latest
     restart: always
     logging:
       options:
@@ -51,7 +51,7 @@ services:
       # options to reset etcd,redis,mysql
       # - ETCD_URL=http://etcd:2379
       # - REDIS_HOST=redis:6379
-      # - MYSQL_URI=root:chatengine@tcp(mysql:3306)/chatengine?charset=utf8mb4
+      # - MYSQL_URI=root:PluralityServer@tcp(mysql:3306)/PluralityServer?charset=utf8mb4
     volumes:
       - ${PWD}/docker/nbfs:/opt/nbfs
     ports:

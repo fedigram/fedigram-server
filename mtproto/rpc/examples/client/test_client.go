@@ -21,11 +21,11 @@ import (
 	"flag"
 	"fmt"
 	"github.com/BurntSushi/toml"
-	"github.com/nebula-chat/chatengine/pkg/util"
-	"github.com/nebula-chat/chatengine/pkg/net2"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/net2"
 	"github.com/gogo/protobuf/proto"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto/rpc"
+	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
 )
 
 var (

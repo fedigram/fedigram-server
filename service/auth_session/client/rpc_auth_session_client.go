@@ -18,10 +18,10 @@
 package auth_session_client
 
 import (
-	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"golang.org/x/net/context"
 )
 

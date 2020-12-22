@@ -20,9 +20,9 @@ package dao
 import (
 	"github.com/golang/glog"
 	"github.com/jmoiron/sqlx"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dao/mysql_dao"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dao/redis_dao"
-	"github.com/nebula-chat/chatengine/pkg/redis_client"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao/mysql_dao"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao/redis_dao"
+	"github.com/PluralityNET/PluralityServer/pkg/redis_client"
 	"sync"
 )
 

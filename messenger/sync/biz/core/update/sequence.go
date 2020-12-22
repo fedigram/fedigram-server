@@ -18,7 +18,7 @@
 package update
 
 import (
-	"github.com/nebula-chat/chatengine/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
 )
 
 const (

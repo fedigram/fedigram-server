@@ -20,10 +20,10 @@ package server
 import (
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/mtproto/rpc"
-	"github.com/nebula-chat/chatengine/pkg/queue2"
-	"github.com/nebula-chat/chatengine/pkg/sync2"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
+	"github.com/PluralityNET/PluralityServer/pkg/queue2"
+	"github.com/PluralityNET/PluralityServer/pkg/sync2"
 	"sync"
 	"time"
 )

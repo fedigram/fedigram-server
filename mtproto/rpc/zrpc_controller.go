@@ -20,8 +20,8 @@ package zrpc
 import (
 	"fmt"
 	"github.com/gogo/protobuf/proto"
-	"github.com/nebula-chat/chatengine/mtproto/rpc/brpc"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/mtproto/rpc/brpc"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
 )
 
 type ZRpcController struct {

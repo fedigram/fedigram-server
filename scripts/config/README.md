@@ -1,4 +1,4 @@
-# chatengine config files
+# PluralityServer config files
 > config files
 
 ## auth_session service

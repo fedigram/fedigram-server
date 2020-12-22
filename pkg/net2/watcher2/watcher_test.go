@@ -22,7 +22,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/coreos/etcd/clientv3"
-	"github.com/nebula-chat/chatengine/pkg/net2"
+	"github.com/PluralityNET/PluralityServer/pkg/net2"
 	"testing"
 	"time"
 )

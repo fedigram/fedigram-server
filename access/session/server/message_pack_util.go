@@ -18,7 +18,7 @@
 package server
 
 import (
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"github.com/golang/glog"
 	"encoding/hex"
 )

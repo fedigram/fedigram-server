@@ -20,10 +20,10 @@ package user
 import (
 	"math/rand"
 	"encoding/hex"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/pkg/util"
-	"github.com/nebula-chat/chatengine/pkg/crypto"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/crypto"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
 	"github.com/golang/glog"
 )
 

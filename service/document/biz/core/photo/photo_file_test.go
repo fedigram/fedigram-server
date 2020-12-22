@@ -18,7 +18,7 @@
 package photo
 
 import (
-	"github.com/nebula-chat/chatengine/pkg/mysql_client"
+	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
 	"testing"
 )
 
@@ -26,13 +26,13 @@ func init() {
 	// rand.Seed(time.Now().UnixNano())
 	mysqlConfig1 := mysql_client.MySQLConfig{
 		Name:   "immaster",
-		DSN:    "root:@/chatengine?charset=utf8",
+		DSN:    "root:@/PluralityServer?charset=utf8",
 		Active: 5,
 		Idle:   2,
 	}
 	mysqlConfig2 := mysql_client.MySQLConfig{
 		Name:   "imslave",
-		DSN:    "root:@/chatengine?charset=utf8",
+		DSN:    "root:@/PluralityServer?charset=utf8",
 		Active: 5,
 		Idle:   2,
 	}

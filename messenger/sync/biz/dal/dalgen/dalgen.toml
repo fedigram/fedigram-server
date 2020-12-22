@@ -1,4 +1,4 @@
 #dalgen.toml
 
 dalFilePath = ".."
-mysqlDsn = "root:@/chatengine?charset=utf8"
+mysqlDsn = "root:@/PluralityServer?charset=utf8"

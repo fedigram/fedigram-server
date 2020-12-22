@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"github.com/golang/glog"
 	"github.com/jmoiron/sqlx"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dataobject"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 type UserBlocksDAO struct {

@@ -19,8 +19,8 @@ package nbfs_client
 
 import (
 	"fmt"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/service/nbfs/proto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/service/nbfs/proto"
 )
 
 type NbfsFacade interface {

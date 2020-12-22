@@ -22,10 +22,10 @@ import (
 	"errors"
 	"fmt"
 	"github.com/coreos/etcd/clientv3"
-	"github.com/nebula-chat/chatengine/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/logger"
-	"github.com/nebula-chat/chatengine/service/idgen/proto"
+	"github.com/PluralityNET/PluralityServer/pkg/logger"
+	"github.com/PluralityNET/PluralityServer/service/idgen/proto"
 	"math/rand"
 	"time"
 )

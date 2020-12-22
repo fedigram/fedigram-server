@@ -21,9 +21,9 @@ import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "fmt"
-    "github.com/nebula-chat/chatengine/pkg/grpc_util"
-    "github.com/nebula-chat/chatengine/pkg/logger"
-    "github.com/nebula-chat/chatengine/mtproto"
+    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+    "github.com/PluralityNET/PluralityServer/pkg/logger"
+    "github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 // account.sendVerifyPhoneCode#823380b4 flags:# allow_flashcall:flags.0?true phone_number:string current_number:flags.0?Bool = auth.SentCode;

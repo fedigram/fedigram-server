@@ -1,4 +1,4 @@
-module github.com/nebula-chat/chatengine
+module github.com/PluralityNET/PluralityServer
 
 require (
 	github.com/BurntSushi/toml v0.3.1

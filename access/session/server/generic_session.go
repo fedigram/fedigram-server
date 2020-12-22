@@ -18,12 +18,12 @@
 package server
 
 import (
-	"github.com/nebula-chat/chatengine/mtproto/rpc"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
 	"github.com/golang/glog"
 	"reflect"
-	"github.com/nebula-chat/chatengine/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
 	"time"
 )
 

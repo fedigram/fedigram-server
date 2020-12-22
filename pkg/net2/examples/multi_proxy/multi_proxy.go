@@ -18,8 +18,8 @@
 package main
 
 import (
-	"github.com/nebula-chat/chatengine/pkg/util"
-	"github.com/nebula-chat/chatengine/pkg/net2/examples/multi_proxy/server"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/net2/examples/multi_proxy/server"
 )
 
 func main() {

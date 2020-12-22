@@ -18,8 +18,8 @@
 package user
 
 import (
-	// "github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/mtproto"
+	// "github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 const (

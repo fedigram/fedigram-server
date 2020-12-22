@@ -19,7 +19,7 @@ package message
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"regexp"
 	"strings"
 )

@@ -24,7 +24,7 @@ import (
 )
 
 func TestGetWebpageOgList(t *testing.T) {
-	ogContents := GetWebpageOgList("https://github.com/nebula-chat/chatengine", []string{"image", "site_name", "title", "description"})
+	ogContents := GetWebpageOgList("https://github.com/PluralityNET/PluralityServer", []string{"image", "site_name", "title", "description"})
 	fmt.Println(ogContents)
 }
 
@@ -36,6 +36,6 @@ func TestUrlParser(t *testing.T) {
 
 	u, err = url.Parse("aaaa")
 	fmt.Println(u, err)
-	u, err = url.Parse("https://github.com/nebula-chat/chatengine")
+	u, err = url.Parse("https://github.com/PluralityNET/PluralityServer")
 	fmt.Println(u, err)
 }

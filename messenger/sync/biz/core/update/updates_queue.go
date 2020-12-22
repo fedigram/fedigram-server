@@ -20,8 +20,8 @@ package update
 import (
 	"encoding/json"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/messenger/sync/biz/dal/dataobject"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/messenger/sync/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"time"
 )
 

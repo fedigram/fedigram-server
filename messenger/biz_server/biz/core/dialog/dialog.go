@@ -19,11 +19,11 @@ package dialog
 
 import (
 	"encoding/json"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/dal/dataobject"
-	"github.com/nebula-chat/chatengine/mtproto"
-	base2 "github.com/nebula-chat/chatengine/pkg/util"
-	// "github.com/nebula-chat/chatengine/messenger/biz_server/biz/core"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	base2 "github.com/PluralityNET/PluralityServer/pkg/util"
+	// "github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
 )
 
 func dialogDOToDialog(dialogDO *dataobject.UserDialogsDO) *mtproto.TLDialog {

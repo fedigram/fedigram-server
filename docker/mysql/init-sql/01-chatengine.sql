@@ -1,11 +1,11 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost-chatengine
+ Source Server         : localhost-PluralityServer
  Source Server Type    : MySQL
  Source Server Version : 50717
  Source Host           : localhost:3307
- Source Schema         : chatengine
+ Source Schema         : PluralityServer
 
  Target Server Type    : MySQL
  Target Server Version : 50717

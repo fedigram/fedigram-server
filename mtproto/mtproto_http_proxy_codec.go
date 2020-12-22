@@ -25,7 +25,7 @@ import (
 	"net"
 	"net/http"
 	// "time"
-	"github.com/nebula-chat/chatengine/pkg/net2"
+	"github.com/PluralityNET/PluralityServer/pkg/net2"
 	// "strings"
 	"bytes"
 	"time"

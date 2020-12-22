@@ -18,9 +18,9 @@
 package server
 
 import (
-	"github.com/nebula-chat/chatengine/pkg/util"
-	"github.com/nebula-chat/chatengine/service/nbfs/cachefs"
-	"github.com/nebula-chat/chatengine/service/nbfs/nbfs"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/PluralityNET/PluralityServer/service/nbfs/cachefs"
+	"github.com/PluralityNET/PluralityServer/service/nbfs/nbfs"
 )
 
 type UploadServiceImpl struct {

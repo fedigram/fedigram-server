@@ -19,9 +19,9 @@ package main
 
 import (
 	"flag"
-	"github.com/nebula-chat/chatengine/messenger/upload/server"
-	_ "github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/pkg/util"
+	"github.com/PluralityNET/PluralityServer/messenger/upload/server"
+	_ "github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
 )
 
 func main() {

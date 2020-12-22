@@ -18,7 +18,7 @@
 package phone
 
 import (
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/core"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
 )
 
 type PhoneServiceImpl struct {

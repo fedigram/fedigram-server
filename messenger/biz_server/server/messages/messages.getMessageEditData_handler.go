@@ -19,11 +19,11 @@ package messages
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
-	"github.com/nebula-chat/chatengine/pkg/logger"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/pkg/logger"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"golang.org/x/net/context"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
 )
 
 // messages.getMessageEditData#fda68d36 peer:InputPeer id:int = messages.MessageEditData;

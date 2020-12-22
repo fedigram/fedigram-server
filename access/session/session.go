@@ -19,8 +19,8 @@ package main
 
 import (
 	"flag"
-	"github.com/nebula-chat/chatengine/access/session/server"
-	"github.com/nebula-chat/chatengine/pkg/util"
+	"github.com/PluralityNET/PluralityServer/access/session/server"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
 )
 
 /*

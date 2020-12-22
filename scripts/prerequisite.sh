@@ -12,12 +12,12 @@ echo "run mysql-docker..."
 docker run --name mysql-docker -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:5.7
 echo "run redis-docker..."
 docker run --name redis-docker -p 6379:6379 -d redis
-echo "clone chatengine..."
-mkdir ${GOPATH}/src/github.com/nebula-chat/
-cd ${GOPATH}/src/github.com/nebula-chat/
-git clone https://github.com/nebula-chat/chatengine.git
+echo "clone PluralityServer..."
+mkdir ${GOPATH}/src/github.com/PluralityNET/
+cd ${GOPATH}/src/github.com/PluralityNET/
+git clone https://github.com/PluralityNET/PluralityServer.git
 
 echo "create db schema ..."
-docker exec -it mysql-docker sh -c 'exec mysql -u root -p -e"CREATE DATABASE chatengine;"'
-docker exec -i mysql-docker mysql --user=root chatengine < ${GOPATH}/src/github.com/nebula-chat/chatengine/scripts/chatengine.sql
+docker exec -it mysql-docker sh -c 'exec mysql -u root -p -e"CREATE DATABASE PluralityServer;"'
+docker exec -i mysql-docker mysql --user=root PluralityServer < ${GOPATH}/src/github.com/PluralityNET/PluralityServer/scripts/PluralityServer.sql
 echo "OK"

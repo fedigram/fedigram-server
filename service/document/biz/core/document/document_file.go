@@ -20,9 +20,9 @@ package document
 import (
 	"encoding/json"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/service/document/biz/dal/dataobject"
-	"github.com/nebula-chat/chatengine/service/nbfs/proto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/service/document/biz/dal/dataobject"
+	"github.com/PluralityNET/PluralityServer/service/nbfs/proto"
 	"time"
 )
 

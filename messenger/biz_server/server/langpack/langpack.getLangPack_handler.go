@@ -20,9 +20,9 @@ package langpack
 import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/nebula-chat/chatengine/pkg/grpc_util"
-    "github.com/nebula-chat/chatengine/pkg/logger"
-    "github.com/nebula-chat/chatengine/mtproto"
+    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+    "github.com/PluralityNET/PluralityServer/pkg/logger"
+    "github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 // langpack.getLangPack#f2f2330a lang_pack:string lang_code:string = LangPackDifference;

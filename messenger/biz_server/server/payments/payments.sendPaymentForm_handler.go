@@ -21,9 +21,9 @@ import (
     "fmt"
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/nebula-chat/chatengine/pkg/grpc_util"
-    "github.com/nebula-chat/chatengine/pkg/logger"
-    "github.com/nebula-chat/chatengine/mtproto"
+    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+    "github.com/PluralityNET/PluralityServer/pkg/logger"
+    "github.com/PluralityNET/PluralityServer/mtproto"
 )
 
 // payments.sendPaymentForm#2b8879b3 flags:# msg_id:int requested_info_id:flags.0?string shipping_option_id:flags.1?string credentials:InputPaymentCredentials = payments.PaymentResult;

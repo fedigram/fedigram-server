@@ -20,9 +20,9 @@ package main
 import (
 	"io"
 	"net"
-	"github.com/nebula-chat/chatengine/pkg/util"
+	"github.com/PluralityNET/PluralityServer/pkg/util"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/net2"
+	"github.com/PluralityNET/PluralityServer/pkg/net2"
 )
 
 func init() {

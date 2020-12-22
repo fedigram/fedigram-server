@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"time"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/pkg/cache"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/pkg/cache"
 	"encoding/hex"
 )
 

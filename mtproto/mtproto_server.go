@@ -20,10 +20,10 @@ package mtproto
 import (
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/etcd_util"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery/etcd3"
-	"github.com/nebula-chat/chatengine/pkg/net2"
+	"github.com/PluralityNET/PluralityServer/pkg/etcd_util"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery/etcd3"
+	"github.com/PluralityNET/PluralityServer/pkg/net2"
 	"net"
 )
 

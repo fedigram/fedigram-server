@@ -19,13 +19,13 @@ package account
 
 import (
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/pkg/grpc_util"
-	"github.com/nebula-chat/chatengine/pkg/logger"
-	"github.com/nebula-chat/chatengine/mtproto"
-	updates2 "github.com/nebula-chat/chatengine/messenger/biz_server/biz/core/update"
+	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/PluralityNET/PluralityServer/pkg/logger"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	updates2 "github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/update"
 	"golang.org/x/net/context"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/core/account"
-	"github.com/nebula-chat/chatengine/messenger/sync/sync_client"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/account"
+	"github.com/PluralityNET/PluralityServer/messenger/sync/sync_client"
 )
 
 // account.setPrivacy#c9f81ce8 key:InputPrivacyKey rules:Vector<InputPrivacyRule> = account.PrivacyRules;

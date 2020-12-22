@@ -18,8 +18,8 @@
 package user
 
 import (
-	"github.com/nebula-chat/chatengine/mtproto"
-	"github.com/nebula-chat/chatengine/messenger/biz_server/biz/base"
+	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
 )
 
 func (m *UserModel) GetUserFull(selfId, userId int32) *mtproto.UserFull {

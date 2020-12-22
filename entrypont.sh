@@ -8,7 +8,7 @@ fi
 export CHATENGINE_HOST=${CHATENGINE_HOST}
 export ETCD_URL=${ETCD_URL:-"http://etcd:2379"}
 export REDIS_HOST=${REDIS_HOST:-"redis:6379"}
-export MYSQL_URI=${MYSQL_URI:-"root:chatengine@tcp(mysql:3306)/chatengine?charset=utf8mb4"}
+export MYSQL_URI=${MYSQL_URI:-"root:PluralityServer@tcp(mysql:3306)/PluralityServer?charset=utf8mb4"}
 
 # create configs from config templates.
 createConfigs() {
@@ -19,7 +19,7 @@ createConfigs() {
       | sed 's#"ip_address": "192.168.1.150"#"ip_address": "'$CHATENGINE_HOST'"#g' \
       | sed "s#http://127.0.0.1:2379#$ETCD_URL#g" \
       | sed "s#127.0.0.1:6379#$REDIS_HOST#g" \
-      | sed "s#root:@tcp(127.0.0.1:3306)/chatengine?charset=utf8mb4#$MYSQL_URI#g" \
+      | sed "s#root:@tcp(127.0.0.1:3306)/PluralityServer?charset=utf8mb4#$MYSQL_URI#g" \
       | cat > $CONFIG_TARGET_DIR/$file
   done
 }

@@ -21,7 +21,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/nebula-chat/chatengine/mtproto"
+	"github.com/PluralityNET/PluralityServer/mtproto"
 	"google.golang.org/grpc"
 	"reflect"
 	"testing"

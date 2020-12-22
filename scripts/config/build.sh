@@ -2,39 +2,39 @@
 
 PWD2=`pwd`
 echo $PWD2
-chatengine="$GOPATH/src/github.com/nebula-chat/chatengine"
+PluralityServer="$GOPATH/src/github.com/PluralityNET/PluralityServer"
 
 echo "build document ..."
-cd ${chatengine}/service/document
+cd ${PluralityServer}/service/document
 go build
 
 echo "build auth_session ..."
-cd ${chatengine}/service/auth_session
+cd ${PluralityServer}/service/auth_session
 go build
 
 echo "build sync ..."
-cd ${chatengine}/messenger/sync
+cd ${PluralityServer}/messenger/sync
 go build
 
 echo "build upload ..."
-cd ${chatengine}/messenger/upload
+cd ${PluralityServer}/messenger/upload
 go build
 
 
 echo "build auth_key ..."
-cd ${chatengine}/access/auth_key
+cd ${PluralityServer}/access/auth_key
 go build
 
 echo "build biz_server ..."
-cd ${chatengine}/messenger/biz_server
+cd ${PluralityServer}/messenger/biz_server
 go build
 
 echo "build session ..."
-cd ${chatengine}/access/session
+cd ${PluralityServer}/access/session
 go build
 
 echo "build frontend ..."
-cd ${chatengine}/access/frontend
+cd ${PluralityServer}/access/frontend
 go build
 
 cd ${PWD2}
