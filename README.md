@@ -2,7 +2,9 @@
 
 # PluralityServer
 
-Status: Limited functionality (as in NebulaChat's chatengine).
+**Main repo:** https://github.com/PluralityNET/PluralityServer
+
+**Status:** Limited functionality (as in NebulaChat's chatengine).
 
 ----------------------------
 
