@@ -38,8 +38,8 @@ Open source [mtproto](https://core.telegram.org/mtproto) server written in golan
 #### Docker run demo
 
 ```shell
-git clone https://github.com/nebula-chat/chatengine
-cd chatengine
+git clone https://github.com/PluralityNET/PluralityServer
+cd PluralityServer
 # replace 192.168.1.100 to you own host IP.
 sed -i "" 's/CHATENGINE_HOST=127.0.0.1/CHATENGINE_HOST=192.168.1.100/g' docker-compose.yml # macOS
 # sed -i 's/CHATENGINE_HOST=127.0.0.1/CHATENGINE_HOST=192.168.1.100/g' docker-compose.yml # linux
@@ -56,72 +56,72 @@ make
 #### Build
 
 - Get source code　
-```
-mkdir -p $GOPATH/src/github.com/nebula-chat/
-cd $GOPATH/src/github.com/nebula-chat/
-git clone https://github.com/nebula-chat/chatengine.git
 
+```
+mkdir -p $GOPATH/src/github.com/PluralityNET/
+cd $GOPATH/src/github.com/PluralityNET/
+git clone https://github.com/PluralityNET/PluralityServer.git
 ```
 
 - Build
     ```
     build frontend
-        cd $GOPATH/src/github.com/nebula-chat/chatengine/access/frontend
+        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/frontend
         go build
     
     build auth_key
-        cd $GOPATH/src/github.com/nebula-chat/chatengine/access/auth_key
+        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/auth_key
         go build
 
     build auth_session
-        cd $GOPATH/src/github.com/nebula-chat/chatengine/service/auth_session
+        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/auth_session
         go build
         
     build sync
-        cd $GOPATH/src/github.com/nebula-chat/chatengine/messenger/sync
+        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/sync
         go build
     
     build upload
-        cd $GOPATH/src/github.com/nebula-chat/chatengine/messenger/upload
+        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/upload
         go build
     
     build document
-        cd $GOPATH/src/github.com/nebula-chat/chatengine/service/document
+        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/document
         go build
 
     build biz_server
-        cd $GOPATH/src/github.com/nebula-chat/chatengine/messenger/biz_server
+        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/biz_server
         go build
         
     build session
-        cd $GOPATH/src/github.com/nebula-chat/chatengine/access/session
+        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/session
         go build
     ```
 
 - Run
     ```
-    cd $GOPATH/src/github.com/nebula-chat/chatengine/service/auth_session
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/auth_session
     ./auth_session
     
-    cd $GOPATH/src/github.com/nebula-chat/chatengine/service/document
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/document
     ./document
 
-    cd $GOPATH/src/github.com/nebula-chat/chatengine/messenger/sync
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/sync
     ./sync
     
-    cd $GOPATH/src/github.com/nebula-chat/chatengine/messenger/upload
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/upload
     ./upload
 
-    cd $GOPATH/src/github.com/nebula-chat/chatengine/messenger/biz_server
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/biz_server
     ./biz_server
 
-    cd $GOPATH/src/github.com/nebula-chat/chatengine/access/auth_key
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/auth_key
     ./auth_key
 
-    cd $GOPATH/src/github.com/nebula-chat/chatengine/access/session
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/session
     ./session
     
-    cd $GOPATH/src/github.com/nebula-chat/chatengine/access/frontend
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/frontend
     ./frontend
     ```
 
