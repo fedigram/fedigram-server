@@ -101,8 +101,21 @@ git clone https://github.com/PluralityNET/PluralityServer.git
         go build
     ```
 
-- Run
+- Init
+    - set the root mysql password;
+    
+    - then,
+    
+    ```shell
+    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/scripts/
+    mysql -u root -p
+        CREATE DATABASE PluralityServer;
+        use PluralityServer;
+        source PluralityServer.sql
+        exit
     ```
+- Run
+    ```shell
     cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/auth_session
     ./auth_session
     
