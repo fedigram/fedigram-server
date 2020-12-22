@@ -104,7 +104,7 @@ git clone https://github.com/PluralityNET/PluralityServer.git
     ```
 
 - Init
-    - configure mysql passwordless login for OS user `root`;
+    - configure mysql passwordless login for OS user `root` for mysql user `root@localhost`;
     
     - then,
     
