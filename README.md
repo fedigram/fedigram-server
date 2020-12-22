@@ -112,7 +112,8 @@ git clone https://github.com/PluralityNET/PluralityServer.git
         CREATE DATABASE PluralityServer;
         use PluralityServer;
         source PluralityServer.sql
-        exit
+        source merge_20181129_201906.sql
+        exit;
     ```
 - Run
     ```shell
