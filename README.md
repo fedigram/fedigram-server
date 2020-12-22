@@ -107,9 +107,12 @@ git clone https://github.com/PluralityNET/PluralityServer.git
     - then,
     
     ```shell
-    mysql -u root -p -e"CREATE DATABASE PluralityServer;"
     cd $GOPATH/src/github.com/PluralityNET/PluralityServer/scripts/
-    mysql -u root -p PluralityServer -e"source PluralityServer.sql"
+    mysql -u root -p
+        CREATE DATABASE PluralityServer;
+        use PluralityServer;
+        source PluralityServer.sql
+        exit
     ```
 - Run
     ```shell
