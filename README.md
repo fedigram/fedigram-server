@@ -149,6 +149,8 @@ git clone https://github.com/nebula-chat/chatengine.git
 
 ## Feedback
 
+PluralityNET's chat: `irc.ilita.i2p` `#plurality`
+
 Nebula Chat's chats:
 
  * English: https://t.me/entelegramd
