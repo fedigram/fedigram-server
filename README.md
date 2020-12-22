@@ -4,6 +4,8 @@
 
 Status: Limited functionality (as in NebulaChat's chatengine).
 
+----------------------------
+
 # OLDER INFO BELOW
 
 # NebulaChat - Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
