@@ -1,5 +1,11 @@
 [![License](https://img.shields.io/github/license/nebula-chat-fork/chatengine.svg)](https://github.com/nebula-chat-fork/chatengine/blob/master/LICENSE)
 
+# PluralityServer
+
+Status: Limited functionality (as in NebulaChat's chatengine).
+
+# OLDER INFO BELOW
+
 # NebulaChat - Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
 > open source mtproto server implemented in golang with compatible telegram client.
 
