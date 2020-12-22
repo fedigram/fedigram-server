@@ -48,6 +48,7 @@ make
 
 ### Manual Build and Install
 #### Depends
+
 - redis
 - mysql
 - etcd
@@ -125,6 +126,7 @@ git clone https://github.com/nebula-chat/chatengine.git
     ```
 
 #### More
+
 [Build document](doc/build.md)
 
 [Build script](scripts/build.sh)
@@ -133,6 +135,7 @@ git clone https://github.com/nebula-chat/chatengine.git
 
 
 ### Compatible clients
+
 **Important**: default signIn and signOut verify code is **12345**
 
 [Android client for NebulaChat](https://github.com/nebula-chat/clients/tree/master/Telegram-Android)
@@ -144,8 +147,9 @@ git clone https://github.com/nebula-chat/chatengine.git
 [tdesktop for NebulaChat](https://github.com/nebula-chat/clients/tree/master/tdesktop)
 
 
-### TODO
-
 ## Feedback
-Please report bugs, concerns, suggestions by issues, or join telegram group [Telegramd中文技术交流群](https://t.me/cntelegramd) Or [Telegramd](https://t.me/entelegramd) to discuss problems around source code.
 
+Nebula Chat's Telegram chat:
+
+ * English: https://t.me/entelegramd
+ * Chinese: https://t.me/cntelegramd
