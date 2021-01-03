@@ -8,6 +8,8 @@
 
 **PluralityServer's status:** Limited functionality (as in public NebulaChat's chatengine). Currently making the code build and run from Plurality repo.
 
+**PluralityNET's chat:** `irc.ilita.i2p` `#plurality`
+
 ----------------------------
 
 # OLDER INFO BELOW
