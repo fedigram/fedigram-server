@@ -3,5 +3,5 @@ all: build run
 build:
 	docker build -t chatengine/server:latest .
 
-run:
+run: build
 	docker-compose up -d
