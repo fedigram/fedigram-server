@@ -17,7 +17,7 @@ COPY . $TARGET_DIR/
 
 RUN go mod init github.com/nebula-chat/chatengine
 
-RUN cd ${TARGET_DIR} && scripts/fetch-go-packages.sh
+# RUN cd ${TARGET_DIR} && scripts/fetch-go-packages.sh
 
 # build biz_server
 # RUN cd ${TARGET_DIR}/messenger/biz_server && go build -ldflags='-s -w'
