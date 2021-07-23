@@ -1,8 +1,17 @@
-# NebulaChat - Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
-> open source mtproto server implemented in golang with compatible telegram client.
+# nebula-chat's chatengine: i2pgram fork
 
-### Introduce
-Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
+An open source [mtproto](https://core.telegram.org/mtproto) server engine implemented in go language with compatible [Telegram](https://telegram.org/) clients.
+
+## Quick start
+
+1. Run `sudo apt install docker docker-compose` in your shell;
+2. Edit `./docker-compose.yml`: replace timezone with your own. There were reports that having a wrong timezone makes chatengine fail.
+3. Run `sudo make` command in your shell;
+4. Now, chatengine is running on your host's TCP port `12345`;
+5. Use [i2pgram clients](https://github.com/i2pgram/i2pgram-clients) to connect to nebula-chat chatengine;
+6. Enjoy!
+
+## The rest of this README is for developers
 
 ### Architecture
 ![Architecture](doc/image/architecture-001.jpeg)
@@ -18,26 +27,10 @@ Open source [mtproto](https://core.telegram.org/mtproto) server written in golan
 
 [Windows-Build](doc/windows-build.md) By [@robinfoxnan](https://github.com/robinfoxnan)
 
-### Quick start with Docker
-
-1. Install `docker` and `docker-compose`
-2. Edit `docker-compose.yml`: replace `CHATENGINE_HOST` to your own host IP
-3. Run `make` command in your shell.
-4. Now, `Chatengine` is running on your host port `12345`.
-
-#### Docker run demo
-
-```shell
-git clone https://github.com/nebula-chat/chatengine
-cd chatengine
-# replace 192.168.1.100 to you own host IP.
-sed -i "" 's/CHATENGINE_HOST=127.0.0.1/CHATENGINE_HOST=192.168.1.100/g' docker-compose.yml # macOS
-# sed -i 's/CHATENGINE_HOST=127.0.0.1/CHATENGINE_HOST=192.168.1.100/g' docker-compose.yml # linux
-make
-```
-
 ### Manual Build and Install
-#### Depends
+
+#### Dependencies
+
 - redis
 - mysql
 - etcd
@@ -45,6 +38,7 @@ make
 #### Build
 
 - Get source code　
+
 ```
 mkdir -p $GOPATH/src/github.com/nebula-chat/
 cd $GOPATH/src/github.com/nebula-chat/
@@ -53,7 +47,7 @@ git clone https://github.com/nebula-chat/chatengine.git
 ```
 
 - Build
-    ```
+```
     build frontend
         cd $GOPATH/src/github.com/nebula-chat/chatengine/access/frontend
         go build
@@ -85,10 +79,11 @@ git clone https://github.com/nebula-chat/chatengine.git
     build session
         cd $GOPATH/src/github.com/nebula-chat/chatengine/access/session
         go build
-    ```
+```
 
 - Run
-    ```
+
+```
     cd $GOPATH/src/github.com/nebula-chat/chatengine/service/auth_session
     ./auth_session
     
@@ -112,9 +107,10 @@ git clone https://github.com/nebula-chat/chatengine.git
     
     cd $GOPATH/src/github.com/nebula-chat/chatengine/access/frontend
     ./frontend
-    ```
+```
 
 #### More
+
 [Build document](doc/build.md)
 
 [Build script](scripts/build.sh)
@@ -122,10 +118,12 @@ git clone https://github.com/nebula-chat/chatengine.git
 [Prerequisite script](scripts/prerequisite.sh)
 
 
-#### **Note**
-> **`import all scripts/*.sql`**
+#### SQL
 
-### Compatible clients
+You need all `scripts/*.sql`.
+
+#### Compatible clients
+
 **Important**: default signIn and signOut verify code is **12345**
 
 [Android client for NebulaChat](https://github.com/nebula-chat/clients/tree/master/Telegram-Android)
@@ -137,13 +135,8 @@ git clone https://github.com/nebula-chat/chatengine.git
 [tdesktop for NebulaChat](https://github.com/nebula-chat/clients/tree/master/tdesktop)
 
 
-### TODO
+## Original chatengine author's notes
 
-## Feedback
-Please report bugs, concerns, suggestions by issues.
-
-## Notes
 Chatengine is not a commercial project, only supports mtproto API layer 86, and only supports private chats and small groups. 
 
 If need enterprise edition, please PM the [author](https://t.me/benqi) or download clients from [nebula.chat](https://nebula.chat) (default verify code is: 12345).
-
