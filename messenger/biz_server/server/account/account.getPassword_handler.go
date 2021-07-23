@@ -14,6 +14,7 @@
 // limitations under the License.
 
 // Author: Benqi (wubenqi@gmail.com)
+// Updated by Hypnosis (hypnosis@mail.i2p)
 
 package account
 
