@@ -9,7 +9,7 @@ services:
         max-size: "50M"
         max-file: "5"
     volumes:
-      - ${PWD}/docker/etcd/data:/data
+      - ./docker/etcd/data:/data
   mysql:
     image: mysql:5.7.17
     restart: always
@@ -18,9 +18,9 @@ services:
         max-size: "50M"
         max-file: "5"
     volumes:
-      - ${PWD}/docker/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
-      - ${PWD}/docker/mysql/init-sql:/docker-entrypoint-initdb.d
-      - ${PWD}/docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+      - ./docker/mysql/init-sql:/docker-entrypoint-initdb.d
+      - ./docker/mysql/data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=chatengine
       - MYSQL_DATABASE=chatengine
@@ -34,8 +34,8 @@ services:
         max-size: "50M"
         max-file: "5"
     volumes:
-      - ${PWD}/docker/redis/redis.conf:/etc/redis/redis.conf
-      - ${PWD}/docker/redis/data:/data
+      - ./docker/redis/redis.conf:/etc/redis/redis.conf
+      - ./docker/redis/data:/data
     entrypoint: redis-server /etc/redis/redis.conf
   chatengine:
     image: chatengine/server:latest
@@ -53,7 +53,7 @@ services:
       # - REDIS_HOST=redis:6379
       # - MYSQL_URI=root:chatengine@tcp(mysql:3306)/chatengine?charset=utf8mb4
     volumes:
-      - ${PWD}/docker/nbfs:/opt/nbfs
+      - ./docker/nbfs:/opt/nbfs
     ports:
       - 12345:12345
     depends_on:
