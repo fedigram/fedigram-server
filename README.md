@@ -5,11 +5,12 @@ An open source [mtproto](https://core.telegram.org/mtproto) server engine implem
 ## Quick start
 
 1. Run `sudo apt install docker docker-compose` in your shell;
-2. Edit `./docker-compose.yml`: replace timezone with your own. There were reports that having a wrong timezone makes chatengine fail.
-3. Run `sudo make` command in your shell;
-4. Now, chatengine is running on your host's TCP port `12345`;
-5. Use [i2pgram clients](https://github.com/i2pgram/i2pgram-clients) to connect to nebula-chat chatengine;
-6. Enjoy!
+2. `git clone --recursive git@github.com:i2pgram/chatengine.git && cd chatengine`
+3. Edit `./docker-compose.yml`: replace timezone with your own. There were reports that having a wrong timezone makes chatengine fail.
+4. Run `sudo make` command in your shell;
+5. Now, chatengine is running on your host's TCP port `12345`;
+6. Use [i2pgram clients](https://github.com/i2pgram/i2pgram-clients) to connect to nebula-chat chatengine;
+7. Enjoy!
 
 ## The rest of this README is for developers
 
