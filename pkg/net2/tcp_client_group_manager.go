@@ -20,7 +20,7 @@ package net2
 import (
 	"errors"
 	"fmt"
-	// "github.com/golang/glog"
+	"github.com/golang/glog"
 	"math/rand"
 	"sync"
 )
