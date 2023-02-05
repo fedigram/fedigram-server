@@ -1,3 +1,10 @@
+The more recent code is here: https://github.com/PluralityNET/PluralGramServer
+
+
+
+
+# OBSOLETE INFO BELOW
+
 # nebula-chat's chatengine: i2pgram fork
 
 An open source [mtproto](https://core.telegram.org/mtproto) server engine implemented in go language with compatible [Telegram](https://telegram.org/) clients.
