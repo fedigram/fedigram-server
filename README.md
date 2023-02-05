@@ -2,20 +2,40 @@
 
 # PluralityServer
 
-**PluralityServer** is a fork of https://github.com/nebula-chat/chatengine
+**PluralityServer** is a fork of nebula-chat/chatengine
 
 **PluralityServer's main repo:** https://github.com/PluralityNET/PluralityServer
 
 **PluralityServer's status:** Limited functionality (as in public NebulaChat's chatengine). Currently making the code build and run from Plurality repo.
 
-**PluralityNET's chat:** `irc.ilita.i2p` `#plurality`
+**PluralityServer's chat:** `irc.ilita.i2p` `#i2pgram`
+
+## Quick start with Docker
+
+1. Install `docker` and `docker-compose`
+2. Edit `docker-compose.yml`: replace `CHATENGINE_HOST` to "127.0.0.1".
+3. Run `make` command in your shell.
+4. Now, i2pgram server is listening on your host port `12345`.
+
+## AKA
+
+ * AKA i2pgram server
+ * AKA NebulaChat chatengine (original name by Chinese author)
+ * AKA PluralityServer
+ * AKA freegram server
+ * AKA Beauty server
+
+## Website
+
+http://beauty.i2p/
 
 ----------------------------
 
-# OLDER INFO BELOW
+# OBSOLETE/OLD INFO BELOW
 
-# NebulaChat - Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
-> open source mtproto server implemented in golang with compatible telegram client.
+## NebulaChat - Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
+
+Open source mtproto server implemented in golang with compatible telegram client.
 
 ### Introduction
 Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
