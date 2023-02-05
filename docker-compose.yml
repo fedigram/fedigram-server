@@ -38,7 +38,7 @@ services:
       - ${PWD}/docker/redis/data:/data
     entrypoint: redis-server /etc/redis/redis.conf
   PluralityServer:
-    image: PluralityServer/server:latest
+    image: pluralityserver/server:latest
     restart: always
     logging:
       options:

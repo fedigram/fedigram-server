@@ -1,7 +1,7 @@
 all: build run
 
 build:
-	docker build -t PluralityServer/server:latest .
+	docker build -t pluralityserver/server:latest .
 
 run:
 	docker-compose up -d
