@@ -4,7 +4,7 @@
 
 **PluralityServer** is a fork of nebula-chat/chatengine
 
-**PluralityServer's main repo:** https://github.com/PluralityNET/PluralityServer
+**PluralityServer's main repo:** https://github.com/PluralityNET/PluralGramServer
 
 **PluralityServer's status:** Limited functionality (as in public NebulaChat's chatengine). Currently making the code build and run from Plurality repo.
 
@@ -22,6 +22,7 @@
  * AKA i2pgram server
  * AKA NebulaChat chatengine (original name by Chinese author)
  * AKA PluralityServer
+ * AKA PluralGramServer
  * AKA freegram server
  * AKA Beauty server
 
