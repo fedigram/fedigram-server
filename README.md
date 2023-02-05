@@ -2,9 +2,13 @@
 
 # PluralityServer
 
-**Main repo:** https://github.com/PluralityNET/PluralityServer
+**PluralityServer** is a fork of https://github.com/nebula-chat/chatengine
 
-**Status:** Limited functionality (as in NebulaChat's chatengine). Making the code build and run from Plurality repo.
+**PluralityServer's main repo:** https://github.com/PluralityNET/PluralityServer
+
+**PluralityServer's status:** Limited functionality (as in public NebulaChat's chatengine). Currently making the code build and run from Plurality repo.
+
+**PluralityNET's chat:** `irc.ilita.i2p` `#plurality`
 
 ----------------------------
 
@@ -102,17 +106,18 @@ git clone https://github.com/PluralityNET/PluralityServer.git
     ```
 
 - Init
-    - set the root mysql password;
+    - configure mysql passwordless login for OS user `root` for mysql user `root@localhost`;
     
     - then,
     
     ```shell
     cd $GOPATH/src/github.com/PluralityNET/PluralityServer/scripts/
-    mysql -u root -p
+    mysql -u root
         CREATE DATABASE PluralityServer;
         use PluralityServer;
         source PluralityServer.sql
-        exit
+        source merge_20181129_201906.sql
+        exit;
     ```
 - Run
     ```shell
