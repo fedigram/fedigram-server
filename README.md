@@ -37,7 +37,7 @@ with compatible old (layer 86) [Telegram](https://telegram.org/) clients.
 ## Quick start
 
 1. Run `sudo apt install docker docker-compose` in your shell;
-2. `git clone --recursive git@github.com:i2pgram/chatengine.git && cd chatengine`
+2. `git clone --recursive git@github.com:fedigram/fedigram-server.git && cd fedigram-server`
 3. Edit `./docker-compose.yml`: replace timezone with your own. There were reports that having a wrong timezone makes chatengine fail.
 4. Run `sudo make -j$(nproc)` command in your shell;
 5. Now, chatengine is running on your host's TCP port `12345`;
