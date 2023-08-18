@@ -38,14 +38,14 @@ services:
       - ./docker/redis/data:/data
     entrypoint: redis-server /etc/redis/redis.conf
   PluralityServer:
-    image: pluralityserver/server:latest
+    image: fedigram/server:latest
     restart: always
     logging:
       options:
         max-size: "50M"
         max-file: "5"
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=Asia/Irkutsk
       # IMPORTANT: replace to your own host IP.
       - CHATENGINE_HOST=127.0.0.1
       # options to reset etcd,redis,mysql
