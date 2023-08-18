@@ -1,4 +1,4 @@
-module github.com/nebula-chat/chatengine
+module github.com/fedigram/fedigram-server
 
 go 1.13
 

@@ -22,16 +22,10 @@ import (
 	"time"
 
 	"github.com/golang/glog"
-<<<<<<< HEAD
 	"github.com/fedigram/fedigram-server/pkg/grpc_util"
 	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
 	"github.com/fedigram/fedigram-server/mtproto"
 	"time"
-=======
-	"github.com/fedigram/fedigram-server/mtproto"
-	"github.com/fedigram/fedigram-server/pkg/grpc_util"
-	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
->>>>>>> master
 )
 
 type syncClient struct {

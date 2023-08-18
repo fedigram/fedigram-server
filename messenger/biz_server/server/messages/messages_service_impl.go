@@ -18,19 +18,7 @@
 package messages
 
 import (
-<<<<<<< HEAD
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
-	// "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/channel"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/chat"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/dialog"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/sticker"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/username"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/bot"
-=======
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
-	// "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/channel"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/bot"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/channel"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/chat"
@@ -39,7 +27,6 @@ import (
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/sticker"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/username"
->>>>>>> master
 )
 
 type MessagesServiceImpl struct {

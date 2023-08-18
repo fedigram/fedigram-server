@@ -1,5 +1,6 @@
 // Copyright (c) 2018-present,  NebulaChat Studio (https://nebula.chat).
 //  All rights reserved.
+// Copyright (c) 2023-present, Fedigram Team. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,10 +23,10 @@ import (
 	"fmt"
 	"go.etcd.io/etcd/clientv3"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/load_balancer"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery/etcd3"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/load_balancer"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery/etcd3"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"

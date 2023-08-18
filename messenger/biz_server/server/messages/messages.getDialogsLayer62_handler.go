@@ -18,22 +18,12 @@
 package messages
 
 import (
-<<<<<<< HEAD
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "github.com/fedigram/fedigram-server/pkg/grpc_util"
     "github.com/fedigram/fedigram-server/pkg/logger"
     "github.com/fedigram/fedigram-server/mtproto"
     "math"
-=======
-	"math"
-
-	"github.com/golang/glog"
-	"github.com/fedigram/fedigram-server/mtproto"
-	"github.com/fedigram/fedigram-server/pkg/grpc_util"
-	"github.com/fedigram/fedigram-server/pkg/logger"
-	"golang.org/x/net/context"
->>>>>>> master
 )
 
 // messages.getDialogs#191ba9c5 flags:# exclude_pinned:flags.0?true offset_date:int offset_id:int offset_peer:InputPeer limit:int = messages.Dialogs;

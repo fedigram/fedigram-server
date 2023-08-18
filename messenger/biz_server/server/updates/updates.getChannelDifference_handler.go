@@ -18,24 +18,14 @@
 package updates
 
 import (
-<<<<<<< HEAD
     "fmt"
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "github.com/fedigram/fedigram-server/pkg/grpc_util"
     "github.com/fedigram/fedigram-server/pkg/logger"
     "github.com/fedigram/fedigram-server/mtproto"
-=======
-	"fmt"
-
-	"github.com/golang/glog"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
 	"github.com/fedigram/fedigram-server/messenger/sync/sync_client"
-	"github.com/fedigram/fedigram-server/mtproto"
-	"github.com/fedigram/fedigram-server/pkg/grpc_util"
-	"github.com/fedigram/fedigram-server/pkg/logger"
-	"golang.org/x/net/context"
->>>>>>> master
 )
 
 // updates.getChannelDifference#3173d78 flags:# force:flags.0?true channel:InputChannel filter:ChannelMessagesFilter pts:int limit:int = updates.ChannelDifference;
