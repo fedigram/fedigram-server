@@ -18,8 +18,8 @@
 package mysql_dao
 
 import(
-	"github.com/PluralityNET/PluralityServer/mtproto"
-    "github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
+    "github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
 	"github.com/jmoiron/sqlx"
 	"github.com/golang/glog"
 	"fmt"

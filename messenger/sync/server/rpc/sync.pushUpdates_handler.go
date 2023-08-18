@@ -20,15 +20,16 @@ package rpc
 import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/PluralityNET/PluralityServer/mtproto"
-    "github.com/PluralityNET/PluralityServer/pkg/logger"
-    "github.com/PluralityNET/PluralityServer/mtproto/rpc"
+    "github.com/fedigram/fedigram-server/mtproto"
+    "github.com/fedigram/fedigram-server/pkg/logger"
+    "github.com/fedigram/fedigram-server/mtproto/rpc"
 )
 
 // sync.pushUpdates#5c612649 user_id:int updates:Updates = Bool;
 func (s *SyncServiceImpl) SyncPushUpdates(ctx context.Context, request *mtproto.TLSyncPushUpdates) (*mtproto.Bool, error) {
     glog.Infof("sync.pushUpdates#5c612649 - request: {%s}", logger.JsonDebugData(request))
 
+    glog.Infoln(request.GetUserId())
     pts, ptsCount, err := s.processUpdatesRequest(request.GetUserId(), request.GetUpdates())
     if err == nil {
         userId := request.GetUserId()

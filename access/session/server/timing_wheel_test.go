@@ -19,7 +19,7 @@ package server
 
 import (
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/pkg/sync2"
+	"github.com/fedigram/fedigram-server/pkg/sync2"
 	"math/rand"
 	"testing"
 	"time"

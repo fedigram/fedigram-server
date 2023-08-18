@@ -19,9 +19,9 @@ package langpack
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/logger"
 	"golang.org/x/net/context"
 )
 

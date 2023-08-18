@@ -1,7 +1,7 @@
 all: build run
 
 build:
-	docker build -t pluralityserver/server:latest .
+	docker build -t fedigram/server:latest .
 
-run:
-	docker-compose up -d
+run: build
+	docker-compose up --build -d

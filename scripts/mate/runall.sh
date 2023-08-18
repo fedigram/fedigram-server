@@ -1,5 +1,5 @@
 function run() {
-  cd $GOPATH/src/github.com/PluralityNET/PluralityServer/$1
+  cd $GOPATH/src/github.com/fedigram/fedigram-server/$1
   mate-terminal -e ./$2 --title=$2 &
 }
 

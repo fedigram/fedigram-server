@@ -20,8 +20,8 @@ package update
 import (
 	"encoding/json"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/messenger/sync/biz/dal/dataobject"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/messenger/sync/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"time"
 )
 
@@ -62,6 +62,9 @@ const (
 	PTS_UPDATE_DELETE_CHANNEL_MESSAGES = 10
 	PTS_UPDATE_EDIT_CHANNEL_MESSAGE    = 11
 	PTS_UPDATE_EDIT_CHANNEL_WEBPAGE    = 12
+
+	//
+	PTS_UPDATE_NEW_REACT = 13
 )
 
 func (m *UpdateModel) GetUpdatesState(authKeyId int64, userId int32) *mtproto.TLUpdatesState {
@@ -178,7 +181,8 @@ func getUpdateType(update *mtproto.Update) int8 {
 
 	case mtproto.TLConstructor_CRC32_updateNewEncryptedMessage:
 		return PTS_UPDATE_NEW_ENCRYPTED_MESSAGE
-
+	case mtproto.TLConstructor_CRC32_updateNewReact:
+		return PTS_UPDATE_NEW_REACT
 	case mtproto.TLConstructor_CRC32_updateNewChannelMessage:
 		return PTS_UPDATE_NEW_CHANNEL_MESSAGE
 	case mtproto.TLConstructor_CRC32_updateDeleteChannelMessages:

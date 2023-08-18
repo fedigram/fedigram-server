@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"github.com/golang/glog"
 	"github.com/gomodule/redigo/redis"
-	// "github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/pkg/redis_client"
-	"github.com/PluralityNET/PluralityServer/service/status/proto"
+	// "github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/redis_client"
+	"github.com/fedigram/fedigram-server/service/status/proto"
 	"strings"
 	"time"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 const (

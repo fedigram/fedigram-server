@@ -19,10 +19,10 @@ package user
 
 import (
 	"github.com/golang/glog"
-	base2 "github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	base2 "github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"time"
 )
 

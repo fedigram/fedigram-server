@@ -20,9 +20,9 @@ package rpc
 import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/logger"
+	"github.com/fedigram/fedigram-server/mtproto/rpc"
 )
 
 // sync.syncUpdates#3a077679 flags:# layer:int user_id:int auth_key_id:long server_id:flags.1?int not_me:flags.0?true updates:Updates = Bool;

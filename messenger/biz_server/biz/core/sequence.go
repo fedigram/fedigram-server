@@ -19,8 +19,8 @@ package core
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/service/idgen/client"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/service/idgen/client"
 )
 
 const (

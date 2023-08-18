@@ -21,8 +21,8 @@ import (
 	"flag"
 	"fmt"
 	"github.com/BurntSushi/toml"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 var (

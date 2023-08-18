@@ -21,8 +21,8 @@ import (
 	"container/list"
 	"context"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
-	"github.com/PluralityNET/PluralityServer/service/status/proto"
+	"github.com/fedigram/fedigram-server/pkg/logger"
+	"github.com/fedigram/fedigram-server/service/status/proto"
 )
 
 type statusServiceImpl struct {

@@ -18,9 +18,9 @@
 package photo
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/service/document/client"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/service/document/client"
 	"time"
 )
 

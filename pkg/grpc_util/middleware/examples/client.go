@@ -20,8 +20,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/middleware/examples/zproto"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/middleware/examples/zproto"
 	"google.golang.org/grpc"
 	"io"
 	"math/rand"

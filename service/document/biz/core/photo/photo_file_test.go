@@ -18,7 +18,7 @@
 package photo
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
+	"github.com/fedigram/fedigram-server/pkg/mysql_client"
 	"testing"
 )
 

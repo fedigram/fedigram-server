@@ -19,7 +19,7 @@ package base
 
 import (
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 type ReportReasonType int8

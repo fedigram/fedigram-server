@@ -20,10 +20,10 @@ package user
 import (
 	"math/rand"
 	"encoding/hex"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/pkg/crypto"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/crypto"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
 	"github.com/golang/glog"
 )
 

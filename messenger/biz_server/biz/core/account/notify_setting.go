@@ -18,10 +18,10 @@
 package account
 
 import (
-	base2 "github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	base2 "github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 func (m *AccountModel) GetNotifySettings(userId int32, peer *base.PeerUtil) *mtproto.PeerNotifySettings {

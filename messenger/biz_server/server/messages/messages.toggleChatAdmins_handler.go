@@ -19,11 +19,11 @@ package messages
 
 import (
 	"github.com/golang/glog"
-	update2 "github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/update"
-	"github.com/PluralityNET/PluralityServer/messenger/sync/sync_client"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
+	update2 "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/update"
+	"github.com/fedigram/fedigram-server/messenger/sync/sync_client"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/logger"
 	"golang.org/x/net/context"
 )
 

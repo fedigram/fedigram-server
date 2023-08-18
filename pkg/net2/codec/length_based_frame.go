@@ -19,7 +19,7 @@ package codec
 
 import (
 	"bufio"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
+	"github.com/fedigram/fedigram-server/pkg/net2"
 	"io"
 )
 

@@ -18,7 +18,7 @@
 package model
 
 import (
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 type LangPacks struct {

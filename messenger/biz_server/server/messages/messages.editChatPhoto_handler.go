@@ -19,14 +19,14 @@ package messages
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/message"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/update"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
-	"github.com/PluralityNET/PluralityServer/service/document/client"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/update"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/logger"
+	"github.com/fedigram/fedigram-server/service/document/client"
 	"golang.org/x/net/context"
 	"time"
 )

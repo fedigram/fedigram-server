@@ -1,5 +1,6 @@
 // Copyright (c) 2018-present,  NebulaChat Studio (https://nebula.chat).
 //  All rights reserved.
+// Copyright (c) 2023-present, Fedigram Team. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,11 +20,11 @@ package chat
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao/mysql_dao"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao/mysql_dao"
 )
 
 type chatsDAO struct {
@@ -34,8 +35,8 @@ type chatsDAO struct {
 }
 
 type ChatModel struct {
-	dao           *chatsDAO
-	photoCallback core.PhotoCallback
+	dao             *chatsDAO
+	photoCallback   core.PhotoCallback
 	accountCallback core.AccountCallback
 }
 
@@ -127,7 +128,7 @@ func (m *ChatModel) GetChatFullBySelfId(selfUserId int32, chatData *chatLogicDat
 	var exportedInvite *mtproto.ExportedChatInvite
 	if selfUserId == chatData.GetCreator() {
 		chatLink := chatData.GetLink()
-		if chatLink == ""{
+		if chatLink == "" {
 			exportedInvite = mtproto.NewTLChatInviteEmpty().To_ExportedChatInvite()
 		} else {
 			inviteExported := &mtproto.TLChatInviteExported{Data2: &mtproto.ExportedChatInvite_Data{

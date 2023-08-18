@@ -1,45 +1,50 @@
-[![License](https://img.shields.io/github/license/nebula-chat-fork/chatengine.svg)](https://github.com/nebula-chat-fork/chatengine/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/open-telegram-server/chatengine.svg)](https://github.com/open-telegram-server/chatengine/blob/master/LICENSE)
 
-# PluralityServer
+# fedigram-server
 
-**PluralityServer** is a fork of nebula-chat/chatengine
+**fedigram-server** is a fork of nebula-chat/chatengine (later renamed to teamgram)
 
-**PluralityServer's main repo:** https://github.com/PluralityNET/PluralGramServer
+**fedigram-server's main repo:** https://github.com/fedigram/fedigram-server
 
-**PluralityServer's status:** Limited functionality (as in public NebulaChat's chatengine). Currently making the code build and run from Plurality repo.
+**fedigram-server's project status:** Unknown; working on this. Currently making the code build and
+run from https://github.com/fedigram/fedigram-server repo.
 
-**PluralityServer's chat:** `irc.ilita.i2p` `#i2pgram`
+**fedigram-server's chats:**
+
+  * `irc.ilita.i2p`   `#fedigram-dev` (see also: https://i2pd.website/ https://geti2p.net/ )
+  * `irc.libera.chat` `#fedigram-dev`
 
 ## Quick start with Docker
 
 1. Install `docker` and `docker-compose`
 2. Edit `docker-compose.yml`: replace `CHATENGINE_HOST` to "127.0.0.1".
-3. Run `make` command in your shell.
-4. Now, i2pgram server is listening on your host port `12345`.
+3. Run `make -j$(nproc)` command in your shell at the git repo folder.
+4. Now, fedigram server is listening on TCP port `12345`.
 
-## AKA
+## Websites (aren't currently working)
 
- * AKA i2pgram server
- * AKA NebulaChat chatengine (original name by Chinese author)
- * AKA PluralityServer
- * AKA PluralGramServer
- * AKA freegram server
- * AKA Beauty server
-
-## Website
-
-http://beauty.i2p/
+ * http://fedigram.i2p/
+ * http://www.fedigram.tranoo.com/
 
 ----------------------------
 
 # OBSOLETE/OLD INFO BELOW
 
-## NebulaChat - Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
-
-Open source mtproto server implemented in golang with compatible telegram client.
-
 ### Introduction
-Open source [mtproto](https://core.telegram.org/mtproto) server written in golang
+An open source [mtproto](https://core.telegram.org/mtproto) server implemented in go language
+with compatible old (layer 86) [Telegram](https://telegram.org/) clients.
+
+## Quick start
+
+1. Run `sudo apt install docker docker-compose` in your shell;
+2. `git clone --recursive git@github.com:i2pgram/chatengine.git && cd chatengine`
+3. Edit `./docker-compose.yml`: replace timezone with your own. There were reports that having a wrong timezone makes chatengine fail.
+4. Run `sudo make -j$(nproc)` command in your shell;
+5. Now, chatengine is running on your host's TCP port `12345`;
+6. Use [fedigram clients](https://github.com/fedigram/fedigram-clients) to connect to fedigram server;
+7. Enjoy!
+
+## The rest of this README is for developers
 
 ### Architecture
 ![Architecture](doc/image/architecture-001.jpeg)
@@ -51,80 +56,74 @@ Open source [mtproto](https://core.telegram.org/mtproto) server written in golan
 
 [Mobile Protocol: Detailed Description (v.1.0, DEPRECATED)](doc/Mobile_Protocol-Detailed_Description_v.1.0_DEPRECATED.md)
 
-[Encrypted CDNs for Speed and Security](doc/cdn.md) [@steedfly](https://github.com/steedfly)翻译
+[Encrypted CDNs for Speed and Security](doc/cdn.md) Translate By [@steedfly](https://github.com/steedfly)
 
-### Quick start with Docker
-
-1. Install `docker` and `docker-compose`
-2. Edit `docker-compose.yml`: replace `CHATENGINE_HOST` to your own host IP
-3. Run `make` command in your shell.
-4. Now, `Chatengine` is running on your host port `12345`.
-
-#### Docker run demo
-
-```shell
-git clone https://github.com/PluralityNET/PluralityServer
-cd PluralityServer
-# replace 192.168.1.100 to you own host IP.
-sed -i "" 's/CHATENGINE_HOST=127.0.0.1/CHATENGINE_HOST=192.168.1.100/g' docker-compose.yml # macOS
-# sed -i 's/CHATENGINE_HOST=127.0.0.1/CHATENGINE_HOST=192.168.1.100/g' docker-compose.yml # linux
-make
-```
+[Windows-Build](doc/windows-build.md) By [@robinfoxnan](https://github.com/robinfoxnan)
 
 ### Manual Build and Install
 
-Note: You will probably need a VM for this as the code often uses root at MySQL and root for filesystem write access.
+Note: You will probably need a VM for this as the code often uses root at MySQL and
+root for filesystem write access.
 
-#### Depends
-
-- redis
-- mysql
-- etcd
-
-#### Build
-
-- Get source code　
-
+```bash
+git clone https://github.com/fedigram/fedigram-server
+cd fedigram-server
+# replace 192.168.1.100 to you own host IP.
+# sed -i "" 's/CHATENGINE_HOST=127.0.0.1/CHATENGINE_HOST=192.168.1.100/g' docker-compose.yml # macOS
+sed -i 's/CHATENGINE_HOST=127.0.0.1/CHATENGINE_HOST=192.168.1.100/g' docker-compose.yml # linux
+make -j$(nproc)
 ```
-mkdir -p $GOPATH/src/github.com/PluralityNET/
-cd $GOPATH/src/github.com/PluralityNET/
-git clone https://github.com/PluralityNET/PluralityServer.git
+
+#### Dependencies
+
+ - redis
+ - mysql
+ - etcd
+
+#### Build (OLD INSTRUCTIONS, NOW INVALID)
+
+ - Get source code　
+
+```bash
+mkdir -p $GOPATH/src/github.com/fedigram/
+cd $GOPATH/src/github.com/fedigram/
+git clone https://github.com/fedigram/fedigram-server.git
 ```
 
 - Build
-    ```
+```
     build frontend
-        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/frontend
+        cd $GOPATH/src/github.com/fedigram/fedigram-server/access/frontend
         go build
     
     build auth_key
-        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/auth_key
+        cd $GOPATH/src/github.com/fedigram/fedigram-server/access/auth_key
         go build
 
     build auth_session
-        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/auth_session
+        cd $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session
         go build
         
     build sync
-        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/sync
+        cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/sync
         go build
     
     build upload
-        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/upload
+        cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/upload
         go build
     
     build document
-        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/document
+        cd $GOPATH/src/github.com/fedigram/fedigram-server/service/document
         go build
 
     build biz_server
-        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/biz_server
+        cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server
         go build
         
     build session
-        cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/session
+        cd $GOPATH/src/github.com/fedigram/fedigram-server/access/session
         go build
-    ```
+```
 
 - Init
     - configure mysql passwordless login for OS user `root` for mysql user `root@localhost`;
@@ -132,7 +131,7 @@ git clone https://github.com/PluralityNET/PluralityServer.git
     - then,
     
     ```shell
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/scripts/
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/scripts/
     mysql -u root
         CREATE DATABASE PluralityServer;
         use PluralityServer;
@@ -142,30 +141,30 @@ git clone https://github.com/PluralityNET/PluralityServer.git
     ```
 - Run
     ```shell
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/auth_session
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session
     ./auth_session
     
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/document
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/service/document
     ./document
 
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/sync
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/sync
     ./sync
     
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/upload
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/upload
     ./upload
 
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/biz_server
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server
     ./biz_server
 
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/auth_key
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/auth_key
     ./auth_key
 
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/session
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/session
     ./session
     
-    cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/frontend
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/frontend
     ./frontend
-    ```
+```
 
 #### More
 
@@ -176,24 +175,27 @@ git clone https://github.com/PluralityNET/PluralityServer.git
 [Prerequisite script](scripts/prerequisite.sh)
 
 
-### Compatible clients
+#### SQL
+
+You need all `scripts/*.sql`.
+
+#### Compatible clients
 
 **Important**: default signIn and signOut verify code is **12345**
 
-[Android client for NebulaChat](https://github.com/nebula-chat/clients/tree/master/Telegram-Android)
+[Android client for NebulaChat](https://github.com/fedigram/fedigram-clients/tree/master/Telegram-Android)
 
-[FOSS client for NebulaChat](https://github.com/nebula-chat/clients/tree/master/Telegram-FOSS)
+[FOSS client for NebulaChat](https://github.com/fedigram/fedigram-clients/tree/master/Telegram-FOSS)
 
-[iOS client for NebulaChat](https://github.com/nebula-chat/clients/tree/master/Telegram-iOS)
+[iOS client for NebulaChat](https://github.com/fedigram/fedigram-clients/tree/master/Telegram-iOS)
 
-[tdesktop for NebulaChat](https://github.com/nebula-chat/clients/tree/master/tdesktop)
+[tdesktop for NebulaChat](https://github.com/fedigram/fedigram-clients/tree/master/tdesktop)
 
 
-## Feedback
+## Original Nebula Chat author's notes
 
-PluralityNET's chat: `irc.ilita.i2p` `#plurality`
+Chatengine is not a commercial project, only supports mtproto API layer 86, and
+only supports private chats and small groups. 
 
-Nebula Chat's chats:
-
- * English: https://t.me/entelegramd
- * Chinese: https://t.me/cntelegramd
+If need enterprise edition, please PM the [author](https://t.me/benqi) or download
+clients from [nebula.chat](https://nebula.chat) (default verify code is: 12345).

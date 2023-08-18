@@ -18,11 +18,11 @@
 package contact
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"time"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
 )
 
 //type contactUser struct {

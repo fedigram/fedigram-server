@@ -19,9 +19,9 @@ package langpack
 
 import (
 	"github.com/BurntSushi/toml"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	model2 "github.com/PluralityNET/PluralityServer/messenger/biz_server/server/langpack/model"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	model2 "github.com/fedigram/fedigram-server/messenger/biz_server/server/langpack/model"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 const (

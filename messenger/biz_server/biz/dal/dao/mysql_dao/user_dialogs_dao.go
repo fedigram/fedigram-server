@@ -19,10 +19,11 @@ package mysql_dao
 
 import (
 	"fmt"
+
 	"github.com/golang/glog"
 	"github.com/jmoiron/sqlx"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 type UserDialogsDAO struct {
@@ -224,7 +225,7 @@ func (dao *UserDialogsDAO) SelectDialogsByUserID(user_id int32) []dataobject.Use
 // select id, user_id, peer_type, peer_id, is_pinned, top_message, read_inbox_max_id, read_outbox_max_id, unread_count, unread_mentions_count, show_previews, silent, mute_until, sound, pts, draft_type, draft_message_data, date2 from user_dialogs where user_id = :user_id and is_pinned = :is_pinned and top_message < :top_message order by top_message desc limit :limit
 // TODO(@benqi): sqlmap
 func (dao *UserDialogsDAO) SelectByPinnedAndOffset(user_id int32, is_pinned int8, top_message int32, limit int32) []dataobject.UserDialogsDO {
-	var query = "select id, user_id, peer_type, peer_id, is_pinned, top_message, read_inbox_max_id, read_outbox_max_id, unread_count, unread_mentions_count, show_previews, silent, mute_until, sound, pts, draft_type, draft_message_data, date2 from user_dialogs where user_id = ? and is_pinned = ? and top_message < ? order by top_message desc limit ?"
+	var query = "select id, user_id, peer_type, peer_id, is_pinned, top_message, read_inbox_max_id, read_outbox_max_id, unread_count, unread_mentions_count, show_previews, silent, mute_until, sound, pts, draft_type, draft_message_data, date2 from user_dialogs where user_id = ? and is_pinned = ? and top_message < ? and top_message > 0 order by top_message desc limit ?"
 	rows, err := dao.db.Queryx(query, user_id, is_pinned, top_message, limit)
 
 	if err != nil {

@@ -18,10 +18,17 @@
 package main
 
 import (
+<<<<<<< HEAD
 	"github.com/coreos/etcd/clientv3"
 	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/load_balancer"
 	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery/etcd3"
 	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery/examples/proto"
+=======
+	"go.etcd.io/etcd/clientv3"
+	"github.com/nebula-chat/chatengine/pkg/grpc_util/load_balancer"
+	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery/etcd3"
+	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery/examples/proto"
+>>>>>>> master
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"log"

@@ -21,9 +21,9 @@ import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "fmt"
-    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-    "github.com/PluralityNET/PluralityServer/pkg/logger"
-    "github.com/PluralityNET/PluralityServer/mtproto"
+    "github.com/fedigram/fedigram-server/pkg/grpc_util"
+    "github.com/fedigram/fedigram-server/pkg/logger"
+    "github.com/fedigram/fedigram-server/mtproto"
 )
 
 // account.getSecureValue#73665bc2 types:Vector<SecureValueType> = Vector<SecureValue>;

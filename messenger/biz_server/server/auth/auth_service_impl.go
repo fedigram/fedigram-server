@@ -18,10 +18,10 @@
 package auth
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/account"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/auth"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/user"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/account"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/auth"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
 )
 
 type AuthServiceImpl struct {

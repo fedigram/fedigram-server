@@ -103,9 +103,9 @@ import (
 
 	"encoding/json"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/cache"
-	_ "github.com/PluralityNET/PluralityServer/pkg/cache/redis"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/cache"
+	_ "github.com/fedigram/fedigram-server/pkg/cache/redis"
 )
 
 const (

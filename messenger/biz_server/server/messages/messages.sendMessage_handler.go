@@ -18,18 +18,19 @@ package messages
 
 import (
 	"fmt"
-	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/message"
-	"github.com/PluralityNET/PluralityServer/messenger/sync/sync_client"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
-	"github.com/PluralityNET/PluralityServer/pkg/mention"
-	"golang.org/x/net/context"
 	"net/url"
 	"strings"
 	"time"
+	"github.com/golang/glog"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
+	"github.com/fedigram/fedigram-server/messenger/sync/sync_client"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/logger"
+	"github.com/fedigram/fedigram-server/pkg/mention"
+	updates "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/update"
+	"golang.org/x/net/context"
 )
 
 const (
@@ -319,8 +320,58 @@ func (s *MessagesServiceImpl) MessagesSendMessage(ctx context.Context, request *
 
 		return replyUpdates, err
 	} else {
-		glog.Warning("blocked, License key from https://nebula.chat required to unlock enterprise features.")
+		channelLogic, _ := s.ChannelModel.NewChannelLogicById(peer.PeerId)
+		resultCB := func(pts, ptsCount int32, channelBox *message.MessageBox2) *mtproto.Updates {
+			replyUpdates := updates.NewUpdatesLogic(md.UserId)
+			channelLogic.SetTopMessage(channelBox.MessageId)
 
-		return nil, fmt.Errorf("sendMessage to channel blocked")
+			replyUpdates.AddUpdateMessageId(channelBox.MessageId, channelBox.RandomId)
+			updateReadChannelInbox := &mtproto.TLUpdateReadChannelInbox{Data2: &mtproto.Update_Data{
+				ChannelId: channelBox.OwnerId,
+				MaxId:     channelBox.MessageId,
+			}}
+			replyUpdates.AddUpdate(updateReadChannelInbox.To_Update())
+			replyUpdates.AddUpdateNewChannelMessage(pts, ptsCount, channelBox.ToMessage(md.UserId))
+			replyUpdates.AddChat(channelLogic.ToChannel(md.UserId))
+
+			return replyUpdates.ToUpdates()
+		}
+
+		syncNotMeCB := func(pts, ptsCount int32, channelBox *message.MessageBox2) ([]int32, int64, *mtproto.Updates, error) {
+			syncUpdates := updates.NewUpdatesLogic(md.UserId)
+
+			updateReadChannelInbox := &mtproto.TLUpdateReadChannelInbox{Data2: &mtproto.Update_Data{
+				ChannelId: channelBox.OwnerId,
+				MaxId:     channelBox.MessageId,
+			}}
+			syncUpdates.AddUpdate(updateReadChannelInbox.To_Update())
+			syncUpdates.AddUpdateNewChannelMessage(pts, ptsCount, channelBox.ToMessage(md.UserId))
+			syncUpdates.AddChat(channelLogic.ToChannel(md.UserId))
+
+			idList := channelLogic.GetChannelParticipantIdList(md.UserId)
+			return idList, md.AuthId, syncUpdates.ToUpdates(), nil
+		}
+
+		pushCB := func(userId, pts, ptsCount int32, channelBox *message.MessageBox2) (*mtproto.Updates, error) {
+			pushUpdates := updates.NewUpdatesLogic(userId)
+
+			pushUpdates.AddUpdateNewChannelMessage(pts, ptsCount, channelBox.ToMessage(userId))
+			pushUpdates.AddChat(channelLogic.ToChannel(userId))
+			pushUpdates.AddUsers(s.UserModel.GetUserListByIdList(channelBox.OwnerId, channelLogic.GetChannelParticipantIdList(md.UserId)))
+
+			return pushUpdates.ToUpdates(), nil
+		}
+
+		replyUpdates, err := s.MessageModel.SendChannelMessage(
+			md.UserId,
+			peer,
+			request.GetRandomId(),
+			outboxMessage.To_Message(),
+			resultCB,
+			syncNotMeCB,
+			pushCB)
+
+		glog.Infof("messages.sendMessage#fa88427a - reply: %s", logger.JsonDebugData(replyUpdates))
+		return replyUpdates, err
 	}
 }

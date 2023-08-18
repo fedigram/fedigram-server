@@ -21,9 +21,9 @@ import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "fmt"
-    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-    "github.com/PluralityNET/PluralityServer/pkg/logger"
-    "github.com/PluralityNET/PluralityServer/mtproto"
+    "github.com/fedigram/fedigram-server/pkg/grpc_util"
+    "github.com/fedigram/fedigram-server/pkg/logger"
+    "github.com/fedigram/fedigram-server/mtproto"
 )
 
 // account.verifyPhone#4dd3a7f6 phone_number:string phone_code_hash:string phone_code:string = Bool;

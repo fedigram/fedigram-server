@@ -20,7 +20,7 @@ package idgen
 import (
 	"errors"
 	"github.com/bwmarrin/snowflake"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 	"github.com/golang/glog"
 )
 

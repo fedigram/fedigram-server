@@ -19,7 +19,7 @@ package dialog
 
 import (
 	"encoding/json"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 func (m *DialogModel) SaveDraftMessage(userId int32, peerType int32, peerId int32, message *mtproto.DraftMessage) {

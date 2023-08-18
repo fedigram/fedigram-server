@@ -23,7 +23,7 @@ import (
 	"encoding/pem"
 	"math/big"
 	"io/ioutil"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 type RSACryptor struct {

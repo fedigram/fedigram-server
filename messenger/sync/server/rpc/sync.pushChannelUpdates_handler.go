@@ -20,20 +20,21 @@ package rpc
 import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/PluralityNET/PluralityServer/mtproto"
-    "github.com/PluralityNET/PluralityServer/pkg/logger"
-    "github.com/PluralityNET/PluralityServer/mtproto/rpc"
+    "github.com/fedigram/fedigram-server/mtproto"
+    "github.com/fedigram/fedigram-server/pkg/logger"
+	zrpc "github.com/fedigram/fedigram-server/mtproto/rpc"
 )
 
 // sync.pushChannelUpdates channel_id:int user_id:int updates:Updates = Bool;
 func (s *SyncServiceImpl) SyncPushChannelUpdates(ctx context.Context, request *mtproto.TLSyncPushChannelUpdates) (*mtproto.Bool, error) {
-    glog.Infof("sync.pushChannelUpdates - request: {%s}", logger.JsonDebugData(request))
-
-    userId := request.GetUserId()
-    cntl := zrpc.NewController()
-    pushData := request.GetUpdates().Encode()
-    s.pushUpdatesToSession(syncTypeUser, userId, 0, 0, cntl, pushData, 0, 0, 0)
-
-    glog.Infof("sync.pushChannelUpdates - reply: {true}",)
-    return mtproto.ToBool(true), nil
+	glog.Infof("sync.pushChannelUpdates - request: {%s}", logger.JsonDebugData(request))
+	pts, ptsCount, err := s.processChannelUpdatesRequest(request.GetUserId(), request.GetChannelId(), request.GetUpdates())
+	if err == nil {
+		userId := request.GetUserId()
+		cntl := zrpc.NewController()
+		pushData := request.GetUpdates().Encode()
+		s.pushUpdatesToSession(syncTypeUser, userId, 0, 0, cntl, pushData, 0, pts, ptsCount)
+	}
+	glog.Infof("sync.pushChannelUpdates - reply: {true}")
+	return mtproto.ToBool(true), nil
 }

@@ -20,10 +20,10 @@ package mtproto
 import (
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/etcd_util"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery/etcd3"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
+	"github.com/fedigram/fedigram-server/pkg/etcd_util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery/etcd3"
+	"github.com/fedigram/fedigram-server/pkg/net2"
 	"net"
 )
 

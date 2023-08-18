@@ -20,8 +20,8 @@ package rpc
 import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/PluralityNET/PluralityServer/mtproto"
-    "github.com/PluralityNET/PluralityServer/pkg/logger"
+    "github.com/fedigram/fedigram-server/mtproto"
+    "github.com/fedigram/fedigram-server/pkg/logger"
     "time"
 )
 

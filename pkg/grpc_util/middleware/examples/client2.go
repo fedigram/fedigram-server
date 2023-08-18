@@ -20,7 +20,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/middleware/examples/helloworld"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/middleware/examples/helloworld"
 	"google.golang.org/grpc"
 	"math/rand"
 	"time"

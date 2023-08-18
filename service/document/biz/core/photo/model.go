@@ -19,10 +19,10 @@ package photo
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
-	"github.com/PluralityNET/PluralityServer/service/document/biz/dal/dao/mysql_dao"
-	"github.com/PluralityNET/PluralityServer/service/idgen/client"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/mysql_client"
+	"github.com/fedigram/fedigram-server/service/document/biz/dal/dao/mysql_dao"
+	"github.com/fedigram/fedigram-server/service/idgen/client"
 )
 
 type photosDAO struct {

@@ -19,8 +19,8 @@ package nbfs_client
 
 import (
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/service/nbfs/proto"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/service/nbfs/proto"
 )
 
 type NbfsFacade interface {

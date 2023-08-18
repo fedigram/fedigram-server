@@ -18,7 +18,7 @@
 package update
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 const (

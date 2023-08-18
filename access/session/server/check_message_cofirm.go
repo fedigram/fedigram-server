@@ -18,7 +18,7 @@
 package server
 
 import (
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 func checkMessageConfirm(tl mtproto.TLObject) bool {

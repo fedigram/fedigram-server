@@ -18,15 +18,15 @@
 package auth_session
 
 import (
-	"github.com/PluralityNET/PluralityServer/service/auth_session/biz/dal/dao/mysql_dao"
-	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
+	"github.com/fedigram/fedigram-server/service/auth_session/biz/dal/dao/mysql_dao"
+	"github.com/fedigram/fedigram-server/pkg/mysql_client"
 	"github.com/golang/glog"
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/service/auth_session/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/service/auth_session/biz/dal/dataobject"
 	"encoding/base64"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"time"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 	"math/rand"
 )
 

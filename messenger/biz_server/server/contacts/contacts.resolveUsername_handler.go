@@ -19,11 +19,11 @@ package contacts
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/logger"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"golang.org/x/net/context"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
 )
 
 // contacts.resolveUsername#f93ccba3 username:string = contacts.ResolvedPeer;

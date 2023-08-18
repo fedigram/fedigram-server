@@ -19,7 +19,7 @@ package redis_client
 
 import (
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 // Redis client config.

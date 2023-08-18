@@ -19,8 +19,8 @@ package main
 
 import (
 	"flag"
-	"github.com/PluralityNET/PluralityServer/access/session/server"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/access/session/server"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 /*

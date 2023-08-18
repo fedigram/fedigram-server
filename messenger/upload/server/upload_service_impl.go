@@ -18,9 +18,9 @@
 package server
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/service/nbfs/cachefs"
-	"github.com/PluralityNET/PluralityServer/service/nbfs/nbfs"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/service/nbfs/cachefs"
+	"github.com/fedigram/fedigram-server/service/nbfs/nbfs"
 )
 
 type UploadServiceImpl struct {

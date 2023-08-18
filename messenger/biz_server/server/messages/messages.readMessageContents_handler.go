@@ -19,15 +19,15 @@ package messages
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/logger"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"golang.org/x/net/context"
 	// "time"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
 	"time"
-	"github.com/PluralityNET/PluralityServer/messenger/sync/sync_client"
+	"github.com/fedigram/fedigram-server/messenger/sync/sync_client"
 )
 
 // messages.readMessageContents#36a73f77 id:Vector<int> = messages.AffectedMessages;

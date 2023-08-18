@@ -18,8 +18,8 @@
 package photos
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/user"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
 )
 
 type PhotosServiceImpl struct {

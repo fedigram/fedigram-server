@@ -20,8 +20,8 @@ package zrpc
 import (
 	"fmt"
 	"github.com/gogo/protobuf/proto"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc/brpc"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/mtproto/rpc/brpc"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
 )
 
 type ZRpcController struct {

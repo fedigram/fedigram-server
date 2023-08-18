@@ -20,9 +20,9 @@ package document
 import (
 	"encoding/json"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/service/document/biz/dal/dataobject"
-	"github.com/PluralityNET/PluralityServer/service/nbfs/proto"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/service/document/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/service/nbfs/proto"
 	"time"
 )
 

@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"time"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/cache"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/cache"
 	"encoding/hex"
 )
 

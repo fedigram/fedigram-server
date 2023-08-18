@@ -1,5 +1,6 @@
 // Copyright (c) 2018-present,  NebulaChat Studio (https://nebula.chat).
 //  All rights reserved.
+// Copyright (c) 2023-present, Fedigram Team. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,24 +19,26 @@
 package message
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao/mysql_dao"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao/mysql_dao"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/redis_client"
+	"github.com/fedigram/fedigram-server/pkg/redis_client"
 )
 
 type messagesDAO struct {
 	*mysql_dao.MessageDatasDAO
-	// *mysql_dao.ChannelMessageBoxesDAO
+	*mysql_dao.ChannelMessageBoxesDAO
 	*mysql_dao.ChatParticipantsDAO
 	*mysql_dao.MessageBoxesDAO
-	// *mysql_dao.ChannelMediaUnreadDAO
-	// *mysql_dao.ChannelMessagesDAO
+	*mysql_dao.ChannelMediaUnreadDAO
+	*mysql_dao.ChannelMessagesDAO
 	*mysql_dao.UsernameDAO
 	*mysql_dao.UnreadMentionsDAO
 	*mysql_dao.CommonDAO
 	*mysql_dao.UserDialogsDAO
+	*mysql_dao.MessageReactDAO
+	*mysql_dao.MessageReactDataDAO
 }
 
 type MessageModel struct {
@@ -46,12 +49,14 @@ type MessageModel struct {
 
 func (m *MessageModel) InstallModel() {
 	m.dao.MessageDatasDAO = dao.GetMessageDatasDAO(dao.DB_MASTER)
-	// m.dao.ChannelMessageBoxesDAO = dao.GetChannelMessageBoxesDAO(dao.DB_MASTER)
+	m.dao.ChannelMessageBoxesDAO = dao.GetChannelMessageBoxesDAO(dao.DB_MASTER)
 	m.dao.ChatParticipantsDAO = dao.GetChatParticipantsDAO(dao.DB_MASTER)
 	m.dao.MessageBoxesDAO = dao.GetMessageBoxesDAO(dao.DB_MASTER)
-	// m.dao.ChannelMediaUnreadDAO = dao.GetChannelMediaUnreadDAO(dao.DB_MASTER)
-	// m.dao.ChannelMessagesDAO = dao.GetChannelMessagesDAO(dao.DB_MASTER)
+	m.dao.ChannelMediaUnreadDAO = dao.GetChannelMediaUnreadDAO(dao.DB_MASTER)
+	m.dao.ChannelMessagesDAO = dao.GetChannelMessagesDAO(dao.DB_MASTER)
 	m.dao.UsernameDAO = dao.GetUsernameDAO(dao.DB_MASTER)
+	m.dao.MessageReactDataDAO = dao.GetMessageReactDataDAO(dao.DB_MASTER)
+
 	m.dao.UnreadMentionsDAO = dao.GetUnreadMentionsDAO(dao.DB_MASTER)
 	m.dao.CommonDAO = dao.GetCommonDAO(dao.DB_MASTER)
 	m.dao.UserDialogsDAO = dao.GetUserDialogsDAO(dao.DB_MASTER)

@@ -22,7 +22,7 @@ import (
 	"encoding/hex"
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
+	"github.com/fedigram/fedigram-server/pkg/net2"
 	"io"
 )
 

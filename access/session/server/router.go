@@ -18,7 +18,7 @@
 package server
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
 	"reflect"
 	"github.com/golang/glog"
 )

@@ -19,7 +19,7 @@ package webpage
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"io/ioutil"
 	"math/rand"
 	"net/http"

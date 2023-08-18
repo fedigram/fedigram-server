@@ -17,7 +17,7 @@
 
 package dialog
 
-import "github.com/PluralityNET/PluralityServer/mtproto"
+import "github.com/fedigram/fedigram-server/mtproto"
 
 type dialogItems struct {
 	MessageIdList       []int32

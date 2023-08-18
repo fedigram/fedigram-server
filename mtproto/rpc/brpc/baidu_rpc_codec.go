@@ -18,7 +18,7 @@
 package brpc
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
+	"github.com/fedigram/fedigram-server/pkg/net2"
 	"io"
 	"encoding/binary"
 	"net"
@@ -26,7 +26,7 @@ import (
 	"github.com/golang/glog"
 	"fmt"
 	"github.com/gogo/protobuf/proto"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 func init() {

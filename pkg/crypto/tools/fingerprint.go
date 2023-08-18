@@ -18,7 +18,7 @@
 package main
 
 import (
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"encoding/binary"
 	"crypto/sha1"
 	"fmt"

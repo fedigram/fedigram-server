@@ -20,7 +20,7 @@ package server
 import (
 	"fmt"
 	"github.com/gogo/protobuf/proto"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"testing"
 )
 

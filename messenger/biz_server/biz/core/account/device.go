@@ -18,9 +18,9 @@
 package account
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/util"
 	"encoding/base64"
 )
 

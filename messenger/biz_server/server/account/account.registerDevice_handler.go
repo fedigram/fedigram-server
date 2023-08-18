@@ -20,10 +20,10 @@ package account
 import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-    "github.com/PluralityNET/PluralityServer/pkg/logger"
-    "github.com/PluralityNET/PluralityServer/mtproto"
-    "github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
+    "github.com/fedigram/fedigram-server/pkg/grpc_util"
+    "github.com/fedigram/fedigram-server/pkg/logger"
+    "github.com/fedigram/fedigram-server/mtproto"
+    "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
 )
 
 // {"token_type":10,"token":"{\"endpoint\":\"https://android.googleapis.com/gcm/send/fFBQfzHLq0I:APA91bF28ucFXm7ZF2T7sf87dKAARGXHzdK3HbK0rrhJMmPZr42amq6B-QASi-mLzOzZ5qsynyvtEOSNNYbvadNKI5LCxmYMhQXkhoh_fpTB0GsYLBjwpElaV68OmTUzN-AFDgWuqMIpQH5XYDZoYQopg-yHHdsxcQ\",\"expirationTime\":null,\"keys\":{\"p256dh\":\"BJLqPVxd2KNAmW_izYz4ha5hN4ZEzXnNbk4__FC-xhmaa2vZD3RRtvgPNphH8ZSM9wF4_vSTJZLzQ5Iv0byZxrY\",\"auth\":\"nBC8C_1cvhSTlEEelbk9kw\"}}","app_sandbox":{"constructor":-1132882121,"data2":{}}}

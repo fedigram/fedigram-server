@@ -18,9 +18,9 @@
 package server
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/mtproto/rpc"
 	"github.com/gogo/protobuf/proto"
 	"github.com/golang/glog"
 )

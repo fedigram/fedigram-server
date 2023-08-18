@@ -2,7 +2,7 @@
 
 PWD2=`pwd`
 echo $PWD2
-PluralityServer="$GOPATH/src/github.com/PluralityNET/PluralityServer"
+PluralityServer="$GOPATH/src/github.com/fedigram/fedigram-server"
 
 echo "build document ..."
 cd ${PluralityServer}/service/document

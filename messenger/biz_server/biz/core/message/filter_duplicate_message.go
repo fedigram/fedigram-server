@@ -21,7 +21,7 @@ import (
 	"github.com/gomodule/redigo/redis"
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"github.com/golang/protobuf/proto"
 )
 

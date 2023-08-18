@@ -15,9 +15,9 @@ docker run --name redis-docker -p 6379:6379 -d redis
 echo "clone PluralityServer..."
 mkdir ${GOPATH}/src/github.com/PluralityNET/
 cd ${GOPATH}/src/github.com/PluralityNET/
-git clone https://github.com/PluralityNET/PluralityServer.git
+git clone https://github.com/fedigram/fedigram-server.git
 
 echo "create db schema ..."
 docker exec -it mysql-docker sh -c 'exec mysql -u root -p -e"CREATE DATABASE PluralityServer;"'
-docker exec -i mysql-docker mysql --user=root PluralityServer < ${GOPATH}/src/github.com/PluralityNET/PluralityServer/scripts/PluralityServer.sql
+docker exec -i mysql-docker mysql --user=root PluralityServer < ${GOPATH}/src/github.com/fedigram/fedigram-server/scripts/PluralityServer.sql
 echo "OK"

@@ -20,8 +20,8 @@ package model
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/logger"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"io/ioutil"
 	"testing"
 )

@@ -1,36 +1,48 @@
-FROM golang:1.12.12 AS builder
+FROM golang:1.13 AS builder
 
 ENV CGO_ENABLED 0
-ENV TARGET_DIR $GOPATH/src/github.com/PluralityNET/PluralityServer
+ENV GO111MODULE=on
+ENV TARGET_DIR $GOPATH/src/github.com/fedigram/fedigram-server
 
-RUN echo $GOPATH
+#unset
+ENV GOPATH=
+
+
+# show go env vars
+RUN go env
+
 RUN mkdir -p $TARGET_DIR
 RUN cd $TARGET_DIR
 COPY . $TARGET_DIR/
 
+RUN go mod init github.com/fedigram/fedigram-server
+
+# RUN cd ${TARGET_DIR} && scripts/fetch-go-packages.sh
+
 # build biz_server
-RUN cd ${TARGET_DIR}/messenger/biz_server && go build -ldflags='-s -w'
+# RUN cd ${TARGET_DIR}/messenger/biz_server && go build -ldflags='-s -w'
 # build document
-RUN cd ${TARGET_DIR}/service/document && go build -ldflags='-s -w'
+# RUN cd ${TARGET_DIR}/service/document && go build -ldflags='-s -w'
 # build auth_session
-RUN cd ${TARGET_DIR}/service/auth_session && go build -ldflags='-s -w'
+# RUN cd ${TARGET_DIR}/service/auth_session && go build -ldflags='-s -w'
 # build sync
-RUN cd ${TARGET_DIR}/messenger/sync && go build -ldflags='-s -w'
+# RUN cd ${TARGET_DIR}/messenger/sync && go build -ldflags='-s -w'
 # build upload
-RUN cd ${TARGET_DIR}/messenger/upload && go build -ldflags='-s -w'
+# RUN cd ${TARGET_DIR}/messenger/upload && go build -ldflags='-s -w'
 # build auth_key
-RUN cd ${TARGET_DIR}/access/auth_key && go build -ldflags='-s -w'
+# RUN cd ${TARGET_DIR}/access/auth_key && go build -ldflags='-s -w'
 # build session
-RUN cd ${TARGET_DIR}/access/session && go build -ldflags='-s -w'
+# RUN cd ${TARGET_DIR}/access/session && go build -ldflags='-s -w'
 # build frontend
-RUN cd ${TARGET_DIR}/access/frontend && go build -ldflags='-s -w'
+# RUN cd ${TARGET_DIR}/access/frontend && go build -ldflags='-s -w'
+
+RUN cd ${TARGET_DIR} && scripts/build_docker.sh
 
 
 
-FROM alpine:3.10.3
-RUN apk add --no-cache ca-certificates tzdata && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+FROM ineva/alpine:3.10.3
 
-ENV TARGET_DIR /go/src/github.com/PluralityNET/PluralityServer
+ENV TARGET_DIR /go/src/github.com/fedigram/fedigram-server
 WORKDIR /app/
 
 COPY ./entrypont.sh /app/

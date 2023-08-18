@@ -18,7 +18,7 @@
 package rpc
 
 import (
-	"github.com/PluralityNET/PluralityServer/service/auth_session/biz/core"
+	"github.com/fedigram/fedigram-server/service/auth_session/biz/core"
 )
 
 type SessionServiceImpl struct {

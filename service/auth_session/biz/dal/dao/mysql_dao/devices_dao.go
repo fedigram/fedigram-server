@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"github.com/golang/glog"
 	"github.com/jmoiron/sqlx"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/service/auth_session/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/service/auth_session/biz/dal/dataobject"
 )
 
 type DevicesDAO struct {

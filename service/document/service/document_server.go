@@ -19,10 +19,10 @@ package service
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
-	"github.com/PluralityNET/PluralityServer/pkg/redis_client"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/mysql_client"
+	"github.com/fedigram/fedigram-server/pkg/redis_client"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"google.golang.org/grpc"
 )
 

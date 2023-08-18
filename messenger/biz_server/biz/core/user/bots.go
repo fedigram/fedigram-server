@@ -17,7 +17,7 @@
 
 package user
 
-import "github.com/PluralityNET/PluralityServer/mtproto"
+import "github.com/fedigram/fedigram-server/mtproto"
 
 func (m *UserModel) GetBotInfo(botId int32) *mtproto.BotInfo {
 	botsDO := m.dao.BotsDAO.Select(botId)

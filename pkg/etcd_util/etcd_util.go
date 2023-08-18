@@ -18,9 +18,15 @@
 package etcd_util
 
 import (
+<<<<<<< HEAD
 	"github.com/coreos/etcd/clientv3"
 	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
 	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery/etcd3"
+=======
+	"go.etcd.io/etcd/clientv3"
+	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery"
+	"github.com/nebula-chat/chatengine/pkg/grpc_util/service_discovery/etcd3"
+>>>>>>> master
 	"time"
 )
 

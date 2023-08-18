@@ -19,12 +19,12 @@ package server
 
 import (
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
-	"github.com/PluralityNET/PluralityServer/service/idgen/client"
+	"github.com/fedigram/fedigram-server/pkg/net2"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto/rpc"
+	"github.com/fedigram/fedigram-server/service/idgen/client"
 	"sync"
 	"github.com/gogo/protobuf/proto"
 	"time"

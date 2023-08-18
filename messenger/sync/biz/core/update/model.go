@@ -19,9 +19,9 @@ package update
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
-	"github.com/PluralityNET/PluralityServer/messenger/sync/biz/dal/dao/mysql_dao"
-	"github.com/PluralityNET/PluralityServer/service/idgen/client"
+	"github.com/fedigram/fedigram-server/pkg/mysql_client"
+	"github.com/fedigram/fedigram-server/messenger/sync/biz/dal/dao/mysql_dao"
+	"github.com/fedigram/fedigram-server/service/idgen/client"
 )
 
 type updatesDAO struct {

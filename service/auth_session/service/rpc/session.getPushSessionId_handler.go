@@ -20,9 +20,9 @@ package rpc
 import (
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-    "github.com/PluralityNET/PluralityServer/pkg/logger"
-    "github.com/PluralityNET/PluralityServer/mtproto"
+    "github.com/fedigram/fedigram-server/pkg/grpc_util"
+    "github.com/fedigram/fedigram-server/pkg/logger"
+    "github.com/fedigram/fedigram-server/mtproto"
 )
 
 // session.getPushSessionId user_id:int auth_key_id:long token_type:int = Int64;

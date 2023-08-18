@@ -19,11 +19,19 @@ package sync_client
 
 import (
 	"context"
-	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
-	"github.com/PluralityNET/PluralityServer/mtproto"
 	"time"
+
+	"github.com/golang/glog"
+<<<<<<< HEAD
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"time"
+=======
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
+>>>>>>> master
 )
 
 type syncClient struct {
@@ -107,6 +115,7 @@ func (c *syncClient) SyncChannelUpdatesNotMe(channelId int32, participantId int3
 	}
 
 	r, err := c.client.SyncSyncChannelUpdates(context.Background(), m)
+	glog.Infoln("This is err", err)
 	return mtproto.FromBool(r), err
 }
 
@@ -159,12 +168,12 @@ func (c *syncClient) SyncGetDifference(authKeyId int64, userId, pts int32) (*mtp
 	return difference, err
 }
 
-
-func (c *syncClient) SyncGetChannelDifference(authKeyId int64, userId, pts int32) (*mtproto.Updates_ChannelDifference, error) {
+func (c *syncClient) SyncGetChannelDifference(authKeyId int64, userId, pts int32, channel *mtproto.InputChannel) (*mtproto.Updates_ChannelDifference, error) {
 	req := &mtproto.TLSyncGetChannelDifference{
 		AuthKeyId: authKeyId,
 		UserId:    userId,
 		Pts:       pts,
+		Channel:   channel,
 		// Date:      int32(time.Now().Unix()),
 		// Qts:       0,
 	}

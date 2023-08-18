@@ -18,18 +18,21 @@
 package updates
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/chat"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/user"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/message"
-	// "github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/channel"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/chat"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/channel"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/chat"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
 )
 
 type UpdatesServiceImpl struct {
 	*user.UserModel
 	*chat.ChatModel
 	*message.MessageModel
-	// *channel.ChannelModel
+	*channel.ChannelModel
 }
 
 func NewUpdatesServiceImpl(models []core.CoreModel) *UpdatesServiceImpl {
@@ -43,8 +46,8 @@ func NewUpdatesServiceImpl(models []core.CoreModel) *UpdatesServiceImpl {
 			impl.ChatModel = m.(*chat.ChatModel)
 		case *message.MessageModel:
 			impl.MessageModel = m.(*message.MessageModel)
-		// case *channel.ChannelModel:
-		// 	impl.ChannelModel = m.(*channel.ChannelModel)
+		case *channel.ChannelModel:
+			impl.ChannelModel = m.(*channel.ChannelModel)
 		}
 	}
 

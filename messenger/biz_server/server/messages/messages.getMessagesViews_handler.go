@@ -21,18 +21,35 @@ import (
     "fmt"
     "github.com/golang/glog"
     "golang.org/x/net/context"
-    "github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-    "github.com/PluralityNET/PluralityServer/pkg/logger"
-    "github.com/PluralityNET/PluralityServer/mtproto"
+    "github.com/fedigram/fedigram-server/pkg/grpc_util"
+    "github.com/fedigram/fedigram-server/pkg/logger"
+    "github.com/fedigram/fedigram-server/mtproto"
 )
 
 // messages.getMessagesViews#c4c8a55d peer:InputPeer id:Vector<int> increment:Bool = Vector<int>;
 func (s *MessagesServiceImpl) MessagesGetMessagesViews(ctx context.Context, request *mtproto.TLMessagesGetMessagesViews) (*mtproto.VectorInt, error) {
-    md := grpc_util.RpcMetadataFromIncoming(ctx)
-    glog.Infof("messages.getMessagesViews - metadata: %s, request: %s", logger.JsonDebugData(md), logger.JsonDebugData(request))
+	md := grpc_util.RpcMetadataFromIncoming(ctx)
+	glog.Infof("messages.getMessagesViews#c4c8a55d - metadata: %s, request: %s", logger.JsonDebugData(md), logger.JsonDebugData(request))
 
-    // Sorry: not impl MessagesGetMessagesViews logic
-    glog.Warning("messages.getMessagesViews blocked, License key from https://nebula.chat required to unlock enterprise features.")
+	var viewsList []int32
 
-    return nil, fmt.Errorf("not imp MessagesGetMessagesViews")
+	if request.GetPeer().GetConstructor() != mtproto.TLConstructor_CRC32_inputPeerChannel {
+		viewsList = []int32{}
+	} else {
+		// TODO(@benqi): push updateChannelMessageViews??
+		channelId := request.GetPeer().GetData2().GetChannelId()
+		increment := mtproto.FromBool(request.GetIncrement())
+
+		viewsList = s.MessageModel.GetChannelMessagesViews(channelId, request.GetId(), increment)
+		if increment {
+			s.MessageModel.IncrementChannelMessagesViews(channelId, request.GetId())
+		}
+	}
+
+	views := &mtproto.VectorInt{
+		Datas: viewsList,
+	}
+
+	glog.Infof("messages.getMessagesViews#c4c8a55d - reply: %s", logger.JsonDebugData(views))
+	return views, nil
 }

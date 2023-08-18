@@ -18,9 +18,9 @@
 package sticker
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao/mysql_dao"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao/mysql_dao"
 )
 
 type stickersDAO struct {

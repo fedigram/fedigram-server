@@ -20,10 +20,10 @@ package auth
 import (
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/crypto"
-	"github.com/PluralityNET/PluralityServer/pkg/random2"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/crypto"
+	"github.com/fedigram/fedigram-server/pkg/random2"
 	"time"
 )
 

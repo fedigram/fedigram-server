@@ -18,8 +18,8 @@
 package auth_session
 
 import (
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/service/auth_session/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/service/auth_session/biz/dal/dataobject"
 )
 
 func getCountryAndRegionByIp(ip string) (string, string) {

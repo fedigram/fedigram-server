@@ -18,8 +18,8 @@
 package user
 
 import (
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
 )
 
 func (m *UserModel) GetUserFull(selfId, userId int32) *mtproto.UserFull {

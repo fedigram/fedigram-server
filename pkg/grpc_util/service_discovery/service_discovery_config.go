@@ -18,7 +18,7 @@
 package service_discovery
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 type ServiceDiscoveryServerConfig struct {

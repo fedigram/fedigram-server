@@ -19,9 +19,9 @@ package main
 
 import (
 	"flag"
-	_ "github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/service/auth_session/service"
+	_ "github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/service/auth_session/service"
 )
 
 func main() {

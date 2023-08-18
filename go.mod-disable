@@ -1,4 +1,4 @@
-module github.com/PluralityNET/PluralityServer
+module github.com/fedigram/fedigram-server
 
 require (
 	github.com/BurntSushi/toml v0.3.1

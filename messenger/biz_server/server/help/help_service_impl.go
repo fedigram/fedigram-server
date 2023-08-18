@@ -18,10 +18,10 @@
 package help
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
 	"encoding/json"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/util"
 	"io/ioutil"
 )
 

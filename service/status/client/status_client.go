@@ -19,7 +19,7 @@ package status_client
 
 import (
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/service/status/proto"
+	"github.com/fedigram/fedigram-server/service/status/proto"
 )
 
 const (

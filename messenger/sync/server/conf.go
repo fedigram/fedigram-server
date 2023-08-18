@@ -21,11 +21,11 @@ import (
 	"flag"
 	"fmt"
 	"github.com/BurntSushi/toml"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
-	"github.com/PluralityNET/PluralityServer/pkg/redis_client"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/mysql_client"
+	"github.com/fedigram/fedigram-server/pkg/redis_client"
+	"github.com/fedigram/fedigram-server/mtproto/rpc"
+	"github.com/fedigram/fedigram-server/pkg/util"
 )
 
 var (

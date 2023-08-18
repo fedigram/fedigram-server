@@ -18,7 +18,7 @@
 package grpc_util
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
 )
 
 type RPCServerConfig struct {

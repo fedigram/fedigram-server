@@ -36,7 +36,7 @@ import (
 	"strconv"
 	"time"
 	"github.com/gomodule/redigo/redis"
-	"github.com/PluralityNET/PluralityServer/pkg/cache"
+	"github.com/fedigram/fedigram-server/pkg/cache"
 )
 
 var (

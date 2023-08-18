@@ -18,9 +18,9 @@
 package main
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/service/status/client"
+	"github.com/fedigram/fedigram-server/service/status/client"
 	"math/rand"
 )
 

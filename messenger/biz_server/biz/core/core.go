@@ -1,5 +1,6 @@
 // Copyright (c) 2018-present,  NebulaChat Studio (https://nebula.chat).
 //  All rights reserved.
+// Copyright (c) 2023-present, Fedigram Team. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,10 +19,10 @@
 package core
 
 import (
-	base2 "github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/base"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/service/idgen/client"
+	base2 "github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
+	"github.com/fedigram/fedigram-server/mtproto"
+	idgen "github.com/fedigram/fedigram-server/service/idgen/client"
 )
 
 const (
@@ -86,9 +87,9 @@ type AccountCallback interface {
 	GetNotifySettings(selfUserId int32, peer *base.PeerUtil) *mtproto.PeerNotifySettings
 }
 
-//type NotifySettingCallback interface {
-//	GetNotifySettings(selfUserId int32, peer *base.PeerUtil) *mtproto.PeerNotifySettings
-//}
+type NotifySettingCallback interface {
+	GetNotifySettings(selfUserId int32, peer *base.PeerUtil) *mtproto.PeerNotifySettings
+}
 
 type PhotoCallback interface {
 	GetUserProfilePhoto(photoId int64) *mtproto.UserProfilePhoto

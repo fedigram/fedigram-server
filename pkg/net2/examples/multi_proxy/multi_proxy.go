@@ -18,8 +18,8 @@
 package main
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/pkg/net2/examples/multi_proxy/server"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/net2/examples/multi_proxy/server"
 )
 
 func main() {

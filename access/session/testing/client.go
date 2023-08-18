@@ -20,9 +20,9 @@ package main
 import (
 	"flag"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/crypto"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/crypto"
+	"github.com/fedigram/fedigram-server/pkg/net2"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 type sessionClient struct {

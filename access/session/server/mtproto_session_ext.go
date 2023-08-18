@@ -19,7 +19,7 @@ package server
 
 import (
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 // invokeAfterMsg#cb9f372d {X:Type} msg_id:long query:!X = X;

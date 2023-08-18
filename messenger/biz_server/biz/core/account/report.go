@@ -18,7 +18,7 @@
 package account
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
 )
 
 func (m *AccountModel) InsertReportData(userId, peerType, peerId, reason int32, text string) bool {

@@ -19,10 +19,10 @@ package server
 
 import (
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/net2"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto/rpc"
 	"time"
 	"github.com/gogo/protobuf/proto"
 	"github.com/golang/glog"

@@ -1,5 +1,6 @@
 // Copyright (c) 2018-present,  NebulaChat Studio (https://nebula.chat).
 //  All rights reserved.
+// Copyright (c) 2023-present, Fedigram Team. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,11 +19,13 @@
 package dialog
 
 import (
+	"time"
+
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao/mysql_dao"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao/mysql_dao"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
 	"time"
 )
 
@@ -90,12 +93,12 @@ func (m *DialogModel) InsertOrUpdateDialog(userId, peerType, peerId, topMessage 
 	m.dao.UserDialogsDAO.InsertOrUpdate(dialogDO)
 }
 
-func (m *DialogModel) InsertOrChannelUpdateDialog(userId, peerType, peerId int32) {
+func (m *DialogModel) InsertOrChannelUpdateDialog(userId, peerType, peerId, top_message int32) {
 	dialogDO := &dataobject.UserDialogsDO{
 		UserId:              userId,
 		PeerType:            int8(peerType),
 		PeerId:              peerId,
-		TopMessage:          0,
+		TopMessage:          top_message,
 		Date2:               int32(time.Now().Unix()),
 		UnreadCount:         0,
 		UnreadMentionsCount: 0,

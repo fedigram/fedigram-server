@@ -19,12 +19,12 @@ package account
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/logger"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"golang.org/x/net/context"
-	"github.com/PluralityNET/PluralityServer/messenger/sync/sync_client"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/update"
+	"github.com/fedigram/fedigram-server/messenger/sync/sync_client"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/update"
 )
 
 // account.updateProfile#78515775 flags:# first_name:flags.0?string last_name:flags.1?string about:flags.2?string = User;

@@ -19,9 +19,9 @@ package updates
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dao"
-	"github.com/PluralityNET/PluralityServer/service/idgen/client"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao"
+	"github.com/fedigram/fedigram-server/service/idgen/client"
 )
 
 /**

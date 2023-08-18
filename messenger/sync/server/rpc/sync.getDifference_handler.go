@@ -19,8 +19,8 @@ package rpc
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/pkg/logger"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/logger"
 	"golang.org/x/net/context"
 	"time"
 )
@@ -77,6 +77,10 @@ func (s *SyncServiceImpl) SyncGetDifference(ctx context.Context, request *mtprot
 				updDeleteMessage := update.To_UpdateDeleteMessages()
 				updDeleteMessage.SetPtsCount(0)
 				otherUpdates = append(otherUpdates, updDeleteMessage.To_Update())
+			case mtproto.TLConstructor_CRC32_updateNewReact:
+				newReact := update.To_UpdateNewReact()
+				newReact.SetPtsCount(0)
+				otherUpdates = append(otherUpdates, newReact.To_Update())
 			default:
 				continue
 			}

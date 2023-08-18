@@ -19,9 +19,9 @@ package main
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
-	"github.com/PluralityNET/PluralityServer/pkg/net2/codec"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/net2"
+	"github.com/fedigram/fedigram-server/pkg/net2/codec"
 	"net"
 )
 

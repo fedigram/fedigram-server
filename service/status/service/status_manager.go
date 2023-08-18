@@ -19,7 +19,7 @@ package service
 
 import (
 	"container/list"
-	"github.com/PluralityNET/PluralityServer/service/status/proto"
+	"github.com/fedigram/fedigram-server/service/status/proto"
 	"sync"
 )
 

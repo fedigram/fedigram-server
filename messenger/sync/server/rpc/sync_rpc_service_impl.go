@@ -20,13 +20,15 @@ package rpc
 import (
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/messenger/sync/biz/core/update"
-	"github.com/PluralityNET/PluralityServer/service/status/proto"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/messenger/sync/biz/core/update"
+	"github.com/fedigram/fedigram-server/service/status/proto"
 	"sync"
 	"github.com/gogo/protobuf/proto"
-	"github.com/PluralityNET/PluralityServer/service/status/client"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
+	"github.com/fedigram/fedigram-server/service/status/client"
+	zrpc "github.com/fedigram/fedigram-server/mtproto/rpc"
+	status_client "github.com/fedigram/fedigram-server/service/status/client"
+	status "github.com/fedigram/fedigram-server/service/status/proto"
 )
 
 /*
@@ -45,7 +47,7 @@ import (
             return 3;
         }
     }
- */
+*/
 
 type SyncType int
 
@@ -102,20 +104,26 @@ type PushDataCallback interface {
 }
 
 type SyncServiceImpl struct {
-	mu        		sync.RWMutex
-	pushCB    		PushDataCallback
-	status     		status_client.StatusClient
-	closeChan 		chan int
-	pushChan 		chan struct {int; *PushData}
+	mu        sync.RWMutex
+	pushCB    PushDataCallback
+	status    status_client.StatusClient
+	closeChan chan int
+	pushChan  chan struct {
+		int
+		*PushData
+	}
 	*update.UpdateModel
 }
 
 func NewSyncService(pushCB PushDataCallback, status status_client.StatusClient, updateModel *update.UpdateModel) *SyncServiceImpl {
 	s := &SyncServiceImpl{
-		pushCB:      pushCB,
-		status:      status,
-		closeChan:   make(chan int),
-		pushChan:    make(chan struct {int; *PushData}, 1024),
+		pushCB:    pushCB,
+		status:    status,
+		closeChan: make(chan int),
+		pushChan: make(chan struct {
+			int
+			*PushData
+		}, 1024),
 		UpdateModel: updateModel,
 	}
 
@@ -239,7 +247,8 @@ func (s *SyncServiceImpl) processUpdatesRequest(userId int32, ups *mtproto.Updat
 				mtproto.TLConstructor_CRC32_updateReadHistoryInbox,
 				mtproto.TLConstructor_CRC32_updateWebPage,
 				mtproto.TLConstructor_CRC32_updateReadMessagesContents,
-				mtproto.TLConstructor_CRC32_updateEditMessage:
+				mtproto.TLConstructor_CRC32_updateEditMessage,
+				mtproto.TLConstructor_CRC32_updateNewReact:
 				s.UpdateModel.AddToPtsQueue(userId, update.Data2.Pts, update.Data2.PtsCount, update)
 				if update.Data2.Pts > pts {
 					pts = update.Data2.Pts
@@ -266,19 +275,11 @@ func (s *SyncServiceImpl) processUpdatesRequest(userId int32, ups *mtproto.Updat
 				}
 				ptsCount += update.Data2.Pts
 			case mtproto.TLConstructor_CRC32_updateNewChannelMessage:
-				//if request.PushType == mtproto.SyncType_SYNC_TYPE_USER_NOTME {
-				//	channelMessage := update.To_UpdateNewChannelMessage().GetMessage()
-				//
-				//	// TODO(@benqi): Check toId() invalid.
-				//	pts = int32(s.UpdateModel.NextChannelPtsId(channelMessage.GetData2().GetToId().GetData2().GetChannelId()))
-				//	ptsCount = 1
-				//	totalPtsCount += 1
-				//
-				//	// @benqi: 以上都有Pts和PtsCount
-				//	update.Data2.Pts = pts
-				//	update.Data2.PtsCount = ptsCount
-				//	s.UpdateModel.AddToChannelPtsQueue(channelMessage.GetData2().GetToId().GetData2().GetChannelId(), pts, ptsCount, update)
-				//}
+				s.UpdateModel.AddToPtsQueue(userId, update.Data2.Pts, update.Data2.PtsCount, update)
+				if update.Data2.Pts > pts {
+					pts = update.Data2.Pts
+				}
+				ptsCount += update.Data2.Pts
 			}
 		}
 
@@ -301,7 +302,7 @@ func (s *SyncServiceImpl) processUpdatesRequest(userId int32, ups *mtproto.Updat
 	return pts, ptsCount, nil
 }
 
-func (s *SyncServiceImpl) processChannelUpdatesRequest(channelId int32, ups *mtproto.Updates) (int32, int32, error) {
+func (s *SyncServiceImpl) processChannelUpdatesRequest(userId, channelId int32, ups *mtproto.Updates) (int32, int32, error) {
 	var pts, ptsCount int32
 	switch ups.GetConstructor() {
 	case mtproto.TLConstructor_CRC32_updates:
@@ -310,6 +311,7 @@ func (s *SyncServiceImpl) processChannelUpdatesRequest(channelId int32, ups *mtp
 			switch update.GetConstructor() {
 			case mtproto.TLConstructor_CRC32_updateNewChannelMessage:
 				s.UpdateModel.AddToChannelPtsQueue(channelId, update.Data2.Pts, update.Data2.PtsCount, update)
+				s.UpdateModel.AddToPtsQueue(userId, update.Data2.Pts, update.Data2.PtsCount, update)
 				if updates2.Data2.Pts > pts {
 					pts = updates2.Data2.Pts
 				}
@@ -346,9 +348,15 @@ func (s *SyncServiceImpl) pushUpdatesToSession(syncType SyncType, userId int32, 
 	if (syncType == syncTypeUserMe || syncType == syncTypeRpcResult) && hasServerId > 0 {
 		glog.Infof("pushUpdatesToSession - pushData: {server_id: %d, auth_key_id: %d}", hasServerId, authKeyId)
 		if syncType == syncTypeUserMe {
-			s.pushChan <- struct {int; *PushData}{int(hasServerId), MakePushUpdatesData(authKeyId, cntl, pts, ptsCount, pushData)}
+			s.pushChan <- struct {
+				int
+				*PushData
+			}{int(hasServerId), MakePushUpdatesData(authKeyId, cntl, pts, ptsCount, pushData)}
 		} else {
-			s.pushChan <- struct {int; *PushData}{int(hasServerId), MakePushRpcResultData(authKeyId, clientMsgId, cntl, pushData)}
+			s.pushChan <- struct {
+				int
+				*PushData
+			}{int(hasServerId), MakePushRpcResultData(authKeyId, clientMsgId, cntl, pushData)}
 		}
 	} else {
 		statusList, _ := s.status.GetUserOnlineSessions(userId)
@@ -375,7 +383,10 @@ func (s *SyncServiceImpl) pushUpdatesToSession(syncType SyncType, userId int32, 
 						continue
 					}
 					glog.Infof("pushUpdatesToSession - pushData: {server_id: %d, auth_key_id: %d}", k, ss4.AuthKeyId)
-					s.pushChan <- struct {int; *PushData}{int(k), MakePushUpdatesData(ss4.AuthKeyId, cntl, pts, ptsCount, pushData)}
+					s.pushChan <- struct {
+						int
+						*PushData
+					}{int(k), MakePushUpdatesData(ss4.AuthKeyId, cntl, pts, ptsCount, pushData)}
 				}
 			}
 		}

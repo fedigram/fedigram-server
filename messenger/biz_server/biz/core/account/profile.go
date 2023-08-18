@@ -18,7 +18,7 @@
 package account
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/dal/dataobject"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
 	"github.com/golang/glog"
 )
 

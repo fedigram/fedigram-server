@@ -20,7 +20,7 @@ package dao
 import (
 	"github.com/golang/glog"
 	"github.com/jmoiron/sqlx"
-	"github.com/PluralityNET/PluralityServer/service/document/biz/dal/dao/mysql_dao"
+	"github.com/fedigram/fedigram-server/service/document/biz/dal/dao/mysql_dao"
 	"sync"
 )
 

@@ -18,7 +18,7 @@
 package redis_dao
 
 import (
-	"github.com/PluralityNET/PluralityServer/pkg/redis_client"
+	"github.com/fedigram/fedigram-server/pkg/redis_client"
 	"testing"
 )
 

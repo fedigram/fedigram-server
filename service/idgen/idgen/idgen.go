@@ -19,8 +19,8 @@ package main
 
 import (
 	"flag"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
-	"github.com/PluralityNET/PluralityServer/service/idgen/idgen/service"
+	"github.com/fedigram/fedigram-server/pkg/util"
+	"github.com/fedigram/fedigram-server/service/idgen/idgen/service"
 )
 
 func main() {

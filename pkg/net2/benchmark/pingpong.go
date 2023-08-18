@@ -20,9 +20,9 @@ package main
 import (
 	"io"
 	"net"
-	"github.com/PluralityNET/PluralityServer/pkg/util"
+	"github.com/fedigram/fedigram-server/pkg/util"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
+	"github.com/fedigram/fedigram-server/pkg/net2"
 )
 
 func init() {

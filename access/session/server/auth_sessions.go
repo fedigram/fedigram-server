@@ -20,10 +20,10 @@ package server
 import (
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
-	"github.com/PluralityNET/PluralityServer/pkg/queue2"
-	"github.com/PluralityNET/PluralityServer/pkg/sync2"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto/rpc"
+	"github.com/fedigram/fedigram-server/pkg/queue2"
+	"github.com/fedigram/fedigram-server/pkg/sync2"
 	"sync"
 	"time"
 )

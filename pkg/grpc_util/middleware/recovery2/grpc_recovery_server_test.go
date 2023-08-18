@@ -20,7 +20,7 @@ package grpc_recovery2
 import (
 	"context"
 	"fmt"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/middleware/examples/zproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/middleware/examples/zproto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

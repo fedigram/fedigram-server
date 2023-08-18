@@ -25,7 +25,7 @@ package mtproto;
 option java_package = "io.PluralityNET.PluralityServer.mtproto";
 option java_outer_classname = "MTProto";
 option optimize_for = CODE_SIZE;
-// option go_package = "github.com/PluralityNET/PluralityServer/mtproto";
+// option go_package = "github.com/fedigram/fedigram-server/mtproto";
 
 // import "schema.tl.core_types.proto";
 

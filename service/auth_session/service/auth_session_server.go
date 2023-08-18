@@ -19,11 +19,11 @@ package service
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/mysql_client"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/mysql_client"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"google.golang.org/grpc"
-	"github.com/PluralityNET/PluralityServer/service/auth_session/service/rpc"
+	"github.com/fedigram/fedigram-server/service/auth_session/service/rpc"
 )
 
 type authSessionServer struct {

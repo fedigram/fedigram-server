@@ -62,7 +62,7 @@ $ docker ps
 ```
 $ mkdir $GOPATH/src/github.com/PluralityNET
 $ cd $GOPATH/src/github.com/PluralityNET
-$ git clone https://github.com/PluralityNET/PluralityServer.git
+$ git clone https://github.com/fedigram/fedigram-server.git
 ```
 
 ### create DB schema
@@ -74,22 +74,22 @@ $ docker exec -it mysql-docker sh -c 'exec mysql -u root -p -e"CREATE DATABASE P
  
  1- if root password does not set for mysql container:
  ```
- $ docker exec -i mysql-docker mysql --user=root PluralityServer < $GOPATH/src/github.com/PluralityNET/PluralityServer/scripts/PluralityServer.sql
+ $ docker exec -i mysql-docker mysql --user=root PluralityServer < $GOPATH/src/github.com/fedigram/fedigram-server/scripts/PluralityServer.sql
  ```
  
  2- if root password is set:
 ```
-$ docker exec -i mysql-docker mysql --user=root --password=my-secret-pw PluralityServer < $GOPATH/src/github.com/PluralityNET/PluralityServer/scripts/PluralityServer.sql
+$ docker exec -i mysql-docker mysql --user=root --password=my-secret-pw PluralityServer < $GOPATH/src/github.com/fedigram/fedigram-server/scripts/PluralityServer.sql
 ```
 note: ***my-secret-pw*** is the same as defined in run mysql container section
 
 ##### 2. set custom password in config files
 if password is empty ignore this section otherwise add password to the following files
 ```
-$ $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/biz_server/biz_server.toml
-$ $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/sync/sync.toml
-$ $GOPATH/src/github.com/PluralityNET/PluralityServer/service/document/document.toml
-$ $GOPATH/src/github.com/PluralityNET/PluralityServer/service/auth_session/auth_session.toml
+$ $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server/biz_server.toml
+$ $GOPATH/src/github.com/fedigram/fedigram-server/messenger/sync/sync.toml
+$ $GOPATH/src/github.com/fedigram/fedigram-server/service/document/document.toml
+$ $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session/auth_session.toml
 ```
 set ***my-secret-pw*** in mysql dsn as follow:
 ```
@@ -108,56 +108,56 @@ dsn = "root:my-secret-pw@/PluralityServer?charset=utf8"
  
 ### build frontend
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/frontend
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/access/frontend
 $ go build
 ```
 
 ### build session
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/session
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/access/session
 $ go build
 ```
 
 ### build auth_key
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/auth_key
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/access/auth_key
 $ go build
 ```
 
 ### build auth_session
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/auth_session
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session
 $ go build
 ```
 
 ### build sync
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/sync
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/sync
 $ go build
 ```
 
 ### build upload
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/upload
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/upload
 $ go build
 ```
 
 ### build document
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/document
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/service/document
 $ go build
 ```
 
 ### build biz_server
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/biz_server
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server
 $ go build
 ```
 
 ### set DcOptions
 in the following file 
 ```
-$ $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/biz_server/config.json
+$ $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server/config.json
 ```
 replace ipAddress by your IP
 ```
@@ -176,28 +176,28 @@ replace ipAddress by your IP
 
 ### run PluralityNET modules
 ```
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/auth_session
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session
 $ ./auth_session
 
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/service/document
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/service/document
 $ ./document
 
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/sync
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/sync
 $ ./sync
 
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/upload
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/upload
 $ ./upload
 
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/messenger/biz_server
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server
 $ ./biz_server
 
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/session
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/access/session
 $ ./session
 
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/auth_key
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/access/auth_key
 $ ./auth_key
 
-$ cd $GOPATH/src/github.com/PluralityNET/PluralityServer/access/frontend
+$ cd $GOPATH/src/github.com/fedigram/fedigram-server/access/frontend
 $ ./frontend
 ```
 

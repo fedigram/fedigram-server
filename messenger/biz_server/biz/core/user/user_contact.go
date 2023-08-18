@@ -18,8 +18,8 @@
 package user
 
 import (
-	// "github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	// "github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 const (

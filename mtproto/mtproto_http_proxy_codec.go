@@ -25,7 +25,7 @@ import (
 	"net"
 	"net/http"
 	// "time"
-	"github.com/PluralityNET/PluralityServer/pkg/net2"
+	"github.com/fedigram/fedigram-server/pkg/net2"
 	// "strings"
 	"bytes"
 	"time"

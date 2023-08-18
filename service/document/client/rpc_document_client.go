@@ -20,9 +20,9 @@ package document_client
 import (
 	"context"
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util/service_discovery"
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
+	"github.com/fedigram/fedigram-server/mtproto"
 )
 
 type documentClient struct {

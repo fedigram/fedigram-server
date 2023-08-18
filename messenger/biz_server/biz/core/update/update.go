@@ -18,7 +18,7 @@
 package updates
 
 import (
-	"github.com/PluralityNET/PluralityServer/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto"
 	"time"
 )
 

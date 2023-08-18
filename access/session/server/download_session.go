@@ -19,9 +19,9 @@ package server
 
 import (
 	"github.com/golang/glog"
-	"github.com/PluralityNET/PluralityServer/mtproto"
-	"github.com/PluralityNET/PluralityServer/mtproto/rpc"
-	"github.com/PluralityNET/PluralityServer/pkg/grpc_util"
+	"github.com/fedigram/fedigram-server/mtproto"
+	"github.com/fedigram/fedigram-server/mtproto/rpc"
+	"github.com/fedigram/fedigram-server/pkg/grpc_util"
 	"reflect"
 	"time"
 )

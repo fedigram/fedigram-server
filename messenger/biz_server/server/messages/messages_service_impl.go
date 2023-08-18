@@ -18,22 +18,35 @@
 package messages
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	// "github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/channel"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/chat"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/dialog"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/message"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/sticker"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/user"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/username"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/bot"
+<<<<<<< HEAD
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	// "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/channel"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/chat"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/dialog"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/sticker"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/username"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/bot"
+=======
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	// "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/channel"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/bot"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/channel"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/chat"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/dialog"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/sticker"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/username"
+>>>>>>> master
 )
 
 type MessagesServiceImpl struct {
 	*user.UserModel
 	*message.MessageModel
 	*chat.ChatModel
-	// *channel.ChannelModel
+	*channel.ChannelModel
 	*sticker.StickerModel
 	*dialog.DialogModel
 	*username.UsernameModel
@@ -51,8 +64,8 @@ func NewMessagesServiceImpl(models []core.CoreModel) *MessagesServiceImpl {
 			impl.MessageModel = m.(*message.MessageModel)
 		case *chat.ChatModel:
 			impl.ChatModel = m.(*chat.ChatModel)
-		// case *channel.ChannelModel:
-		// 	impl.ChannelModel = m.(*channel.ChannelModel)
+		case *channel.ChannelModel:
+			impl.ChannelModel = m.(*channel.ChannelModel)
 		case *sticker.StickerModel:
 			impl.StickerModel = m.(*sticker.StickerModel)
 		case *dialog.DialogModel:

@@ -18,12 +18,12 @@
 package contacts
 
 import (
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/contact"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/user"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/username"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/chat"
-	"github.com/PluralityNET/PluralityServer/messenger/biz_server/biz/core/dialog"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/contact"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/username"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/chat"
+	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/dialog"
 )
 
 type ContactsServiceImpl struct {
