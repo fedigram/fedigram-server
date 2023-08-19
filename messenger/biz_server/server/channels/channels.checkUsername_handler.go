@@ -18,13 +18,12 @@
 package channels
 
 import (
-    "fmt"
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "github.com/fedigram/fedigram-server/pkg/grpc_util"
     "github.com/fedigram/fedigram-server/pkg/logger"
     "github.com/fedigram/fedigram-server/mtproto"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/username"
+    "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/username"
 )
 
 // channels.checkUsername#10e6bd2c channel:InputChannel username:string = Bool;

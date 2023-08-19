@@ -1,3 +1,6 @@
+./**/*~
+*~
+
 #folder
 target/
 .vagrant/

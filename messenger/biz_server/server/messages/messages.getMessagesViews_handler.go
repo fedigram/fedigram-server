@@ -18,7 +18,6 @@
 package messages
 
 import (
-    "fmt"
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "github.com/fedigram/fedigram-server/pkg/grpc_util"

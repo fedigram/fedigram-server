@@ -18,7 +18,6 @@
 package channels
 
 import (
-    "fmt"
     "github.com/golang/glog"
     "golang.org/x/net/context"
     "github.com/fedigram/fedigram-server/pkg/grpc_util"
@@ -29,7 +28,6 @@ import (
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
 	updates "github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/update"
 	"github.com/fedigram/fedigram-server/messenger/sync/sync_client"
-	"golang.org/x/net/context"
 )
 
 // channels.createChannel#f4893d7f flags:# broadcast:flags.0?true megagroup:flags.1?true title:string about:string = Updates;

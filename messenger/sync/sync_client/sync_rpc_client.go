@@ -20,12 +20,10 @@ package sync_client
 import (
 	"context"
 	"time"
-
 	"github.com/golang/glog"
 	"github.com/fedigram/fedigram-server/pkg/grpc_util"
 	"github.com/fedigram/fedigram-server/pkg/grpc_util/service_discovery"
 	"github.com/fedigram/fedigram-server/mtproto"
-	"time"
 )
 
 type syncClient struct {
