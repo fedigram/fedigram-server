@@ -20,13 +20,11 @@ package dialog
 
 import (
 	"time"
-
 	"github.com/golang/glog"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao/mysql_dao"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dataobject"
-	"time"
 )
 
 type dialogsDAO struct {

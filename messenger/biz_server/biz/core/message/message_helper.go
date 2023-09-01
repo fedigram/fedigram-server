@@ -21,7 +21,6 @@ package message
 import (
 	"fmt"
 	"time"
-
 	"github.com/gogo/protobuf/proto"
 	"github.com/golang/glog"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
@@ -30,7 +29,6 @@ import (
 	"github.com/fedigram/fedigram-server/messenger/sync/sync_client"
 	"github.com/fedigram/fedigram-server/mtproto"
 	base2 "github.com/fedigram/fedigram-server/pkg/util"
-	"time"
 )
 
 type OnBoxCallback func(int32, *MessageBox2)

@@ -21,7 +21,6 @@ package chat
 import (
 	"math/rand"
 	"time"
-
 	"github.com/golang/glog"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/base"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core"
@@ -29,8 +28,6 @@ import (
 	"github.com/fedigram/fedigram-server/mtproto"
 	"github.com/fedigram/fedigram-server/pkg/random2"
 	base2 "github.com/fedigram/fedigram-server/pkg/util"
-	"math/rand"
-	"time"
 )
 
 const (

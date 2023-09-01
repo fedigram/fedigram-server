@@ -23,9 +23,6 @@ import (
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/channel"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/chat"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/message"
-	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/core/user"
 )
 
 type UpdatesServiceImpl struct {

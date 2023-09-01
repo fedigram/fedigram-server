@@ -21,7 +21,6 @@ import (
     "github.com/golang/glog"
     "github.com/fedigram/fedigram-server/mtproto"
     "golang.org/x/net/context"
-    "fmt"
     "github.com/fedigram/fedigram-server/pkg/grpc_util"
     "github.com/fedigram/fedigram-server/pkg/logger"
 )

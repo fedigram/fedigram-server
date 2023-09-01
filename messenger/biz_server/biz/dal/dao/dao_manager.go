@@ -20,13 +20,11 @@ package dao
 
 import (
 	"sync"
-
 	"github.com/golang/glog"
 	"github.com/jmoiron/sqlx"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao/mysql_dao"
 	"github.com/fedigram/fedigram-server/messenger/biz_server/biz/dal/dao/redis_dao"
 	"github.com/fedigram/fedigram-server/pkg/redis_client"
-	"sync"
 )
 
 const (
