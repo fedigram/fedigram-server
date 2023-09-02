@@ -18,8 +18,9 @@ run from https://github.com/fedigram/fedigram-server repo.
 
 1. Install `docker` and `docker-compose`
 2. Edit `docker-compose.yml`: replace `CHATENGINE_HOST` to "127.0.0.1".
-3. Run `make -j$(nproc)` command in your shell at the git repo folder.
-4. Now, fedigram server is listening on TCP port `12345`.
+3. ? Edit `scripts/config/config.json` and specify `/data2/dc_options{ip_address,port}`. ?
+4. Run `make -j$(nproc)` command in your shell at the git repo folder.
+5. Now, fedigram server is listening on TCP port `12345`.
 
 ## Websites (aren't currently working)
 
