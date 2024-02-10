@@ -13,6 +13,7 @@ run from https://github.com/fedigram/fedigram-server repo.
 
   * `irc.ilita.i2p`   `#fedigram-dev` (see also: https://i2pd.website/ https://geti2p.net/ )
   * `irc.libera.chat` `#fedigram-dev`
+  * не хотите телегу с опенсорсным сервером поделать федеративную как федиверс? `#fedigram-dev`
 
 ## Quick start with Docker
 
