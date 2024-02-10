@@ -166,7 +166,7 @@ git clone https://github.com/fedigram/fedigram-server.git
     
     cd $GOPATH/src/github.com/fedigram/fedigram-server/access/frontend
     ./frontend
-```
+    ```
 
 #### More
 
