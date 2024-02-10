@@ -65,16 +65,26 @@ run from https://github.com/fedigram/fedigram-server repo.
         source merge_20181129_201906.sql
         exit;
     ```
-- Configure: edit `*.toml *.json` files at `$GOPATH/src/github.com/fedigram/fedigram-server/scripts/config/`:
-    * auth_session service: `auth_session.toml`
-    * document service:  `document.toml`
+- Configure:
+  - Run
+    ```bash
+     cd $GOPATH/src/github.com/fedigram/fedigram-server/scripts/config && source ./createconfig.sh
+    ```
+  - Edit `*.toml *.json` files there:
+    * auth_session service: `auth_session.toml` // includes redis & mysql parameters
+    * document service:  `document.toml` // includes redis & mysql parameters
     * sync service: `sync.toml`
     * upload service:  `upload.toml`
-    * biz_server service:  `config.json lang_pack_en.toml lang_pack_cn.toml biz_server.toml`
+    * biz_server service:
+       * `config.json lang_pack_en.toml lang_pack_cn.toml`
+       * `biz_server.toml` // includes redis & mysql parameters
     * auth_key service: `server_pkcs1.key auth_key.toml`
     * session service: `session.toml`
     * frontend service: `frontend.toml`
-# [OBSOLETE UNEDITED INFO BELOW]
+  - When completed, run
+    ```bash
+     source ./installconfig.sh
+    ```
 - Run
     ```shell
     cd $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session
