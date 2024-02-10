@@ -28,6 +28,80 @@ run from https://github.com/fedigram/fedigram-server repo.
  * http://fedigram.i2p/
  * http://www.fedigram.tranoo.com/
 
+#### Build 
+
+ - Get the source code　
+
+   ```bash
+   mkdir -pv $GOPATH/src/github.com/fedigram
+   cd $GOPATH/src/github.com/fedigram
+   #then, if you have ssh key on github
+   eval `ssh-agent`
+   ssh-add your-github-ssh-key
+   git clone git@github.com:fedigram/fedigram-server.git
+   #or, if you don't have ssh key on github
+   git clone https://github.com/fedigram/fedigram-server.git
+   ```
+
+ - Build
+
+    ```bash
+    source $GOPATH/src/github.com/fedigram/fedigram-server/scripts/config/build.sh
+    ```
+
+- Init
+    - OS tested: Ubuntu 20.04.6 `Linux 5.15.0-92-generic #102~20.04.1-Ubuntu SMP Mon Jan 15 13:09:14 UTC 2024 x86_64`
+    - mysql tested: mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1)
+    - install mysql somewhere
+    - then,
+    
+    ```bash
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/scripts/
+    mysql -u root -p
+    # at mysql: 
+        CREATE DATABASE PluralityServer;
+        use PluralityServer;
+        source PluralityServer.sql
+        source merge_20181129_201906.sql
+        exit;
+    ```
+- Configure: edit `*.toml *.json` files at `$GOPATH/src/github.com/fedigram/fedigram-server/scripts/config/`:
+    * auth_session service: `auth_session.toml`
+    * document service:  `document.toml`
+    * sync service: `sync.toml`
+    * upload service:  `upload.toml`
+    * biz_server service:  `config.json lang_pack_en.toml lang_pack_cn.toml biz_server.toml`
+    * auth_key service: `server_pkcs1.key auth_key.toml`
+    * session service: `session.toml`
+    * frontend service: `frontend.toml`
+# [OBSOLETE UNEDITED INFO BELOW]
+- Run
+    ```shell
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session
+    ./auth_session
+    
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/service/document
+    ./document
+
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/sync
+    ./sync
+    
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/upload
+    ./upload
+
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server
+    ./biz_server
+
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/auth_key
+    ./auth_key
+
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/session
+    ./session
+    
+    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/frontend
+    ./frontend
+    ```
+
 ----------------------------
 
 # OBSOLETE/OLD INFO BELOW
@@ -81,92 +155,6 @@ make -j$(nproc)
  - redis
  - mysql
  - etcd
-
-#### Build (OLD INSTRUCTIONS, NOW INVALID)
-
- - Get source code　
-
-```bash
-mkdir -p $GOPATH/src/github.com/fedigram/
-cd $GOPATH/src/github.com/fedigram/
-git clone https://github.com/fedigram/fedigram-server.git
-```
-
-- Build
-```
-    build frontend
-        cd $GOPATH/src/github.com/fedigram/fedigram-server/access/frontend
-        go build
-    
-    build auth_key
-        cd $GOPATH/src/github.com/fedigram/fedigram-server/access/auth_key
-        go build
-
-    build auth_session
-        cd $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session
-        go build
-        
-    build sync
-        cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/sync
-        go build
-    
-    build upload
-        cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/upload
-        go build
-    
-    build document
-        cd $GOPATH/src/github.com/fedigram/fedigram-server/service/document
-        go build
-
-    build biz_server
-        cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server
-        go build
-        
-    build session
-        cd $GOPATH/src/github.com/fedigram/fedigram-server/access/session
-        go build
-```
-
-- Init
-    - configure mysql passwordless login for OS user `root` for mysql user `root@localhost`;
-    
-    - then,
-    
-    ```shell
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/scripts/
-    mysql -u root
-        CREATE DATABASE PluralityServer;
-        use PluralityServer;
-        source PluralityServer.sql
-        source merge_20181129_201906.sql
-        exit;
-    ```
-- Run
-    ```shell
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/service/auth_session
-    ./auth_session
-    
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/service/document
-    ./document
-
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/sync
-    ./sync
-    
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/upload
-    ./upload
-
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/messenger/biz_server
-    ./biz_server
-
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/auth_key
-    ./auth_key
-
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/session
-    ./session
-    
-    cd $GOPATH/src/github.com/fedigram/fedigram-server/access/frontend
-    ./frontend
-    ```
 
 #### More
 
